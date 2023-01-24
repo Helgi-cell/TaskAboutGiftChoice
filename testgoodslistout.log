@@ -1,0 +1,4 @@
+[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
+, Goods{idGood=2, goodName='BoomBox', presentVolume=9.11, presentPrice=45.03}
+, Goods{idGood=3, goodName='Wallet', presentVolume=4.53, presentPrice=1.23}
+]

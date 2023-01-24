@@ -33,7 +33,7 @@ class GifttaskApplicationTests {
 		Assertions.assertTrue(taskConditions.getBagVolume() == 64.11);
 		Assertions.assertTrue(taskConditions.getPeopleNum() == 6);
 
-		PrintStream out = new PrintStream(new FileOutputStream("taskconditionsout.log"));
+		PrintStream out = new PrintStream(new FileOutputStream("testtaskconditionsout.log"));
 		System.setOut(out);
 		System.out.println(taskConditions);
 	}
@@ -63,7 +63,7 @@ class GifttaskApplicationTests {
 		Assertions.assertTrue(goodsList.get(0).getIdGood() == 1);
 		Assertions.assertTrue(goodsList.get(1).getGoodName().equals("BoomBox"));
 
-		PrintStream out = new PrintStream(new FileOutputStream("goodslistout.log"));
+		PrintStream out = new PrintStream(new FileOutputStream("testgoodslistout.log"));
 		System.setOut(out);
 		System.out.println(goodsList);
 	}
