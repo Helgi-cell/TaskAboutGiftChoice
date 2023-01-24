@@ -1,0 +1,11 @@
+com/aleh/brest/gifttask/goodsAPI/DataLoadable.class
+com/aleh/brest/gifttask/service/RunGiftChoice.class
+com/aleh/brest/gifttask/entities/Gifts.class
+com/aleh/brest/gifttask/entities/Goods.class
+com/aleh/brest/gifttask/entities/GiftsInBag.class
+com/aleh/brest/gifttask/GifttaskApplication.class
+com/aleh/brest/gifttask/entities/TaskConditions.class
+com/aleh/brest/gifttask/loadingData/LoadData.class
+com/aleh/brest/gifttask/service/SolutionDTO.class
+com/aleh/brest/gifttask/goodsAPI/TaskConditionsInterface.class
+com/aleh/brest/gifttask/goodsAPI/GoodsInterface.class

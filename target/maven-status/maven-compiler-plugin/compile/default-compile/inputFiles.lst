@@ -1,0 +1,11 @@
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/GifttaskApplication.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/goodsAPI/TaskConditionsInterface.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/service/SolutionDTO.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/goodsAPI/DataLoadable.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/loadingData/LoadData.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/entities/TaskConditions.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/entities/Goods.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/service/RunGiftChoice.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/goodsAPI/GoodsInterface.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/entities/Gifts.java
+/home/olegsuhodolsky/dev/TaskAboutGiftChoice/src/main/java/com/aleh/brest/gifttask/entities/GiftsInBag.java
