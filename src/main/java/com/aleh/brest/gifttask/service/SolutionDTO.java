@@ -5,6 +5,7 @@ import com.aleh.brest.gifttask.entities.GiftsInBag;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -96,7 +97,7 @@ public class SolutionDTO {
             }
             giftsInBag = new GiftsInBag(giftsList, taskCondition);
 
-            if (giftsInBag.getDeltaToBudget() == delta) {
+            if (Math.abs(giftsInBag.getDeltaToBudget() - delta) < 0.00001) {
                 this.resultGifts.add(giftsInBag);
             } else {
                 if (giftsInBag.getDeltaToBudget() < delta
