@@ -3,7 +3,7 @@ package com.aleh.brest.gifttask.goodsAPI;
 public interface GoodsInterface {
 
 
-/*
+
 
     final Long [] idGoods = { 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L };
 
@@ -23,14 +23,18 @@ public interface GoodsInterface {
                                     };
 
 
+    final Integer [] presentQuantity = {   12,   5, 40, 8
+                                ,   22, 100,  7, 3
+                                ,    2,  17, 10,12
+                                };
 
 
-*/
 
 
 
 
 
+/*
 
     final Long [] idGoods = { 1L, 2L, 3L//, 4L, 5L
     };
@@ -44,6 +48,7 @@ public interface GoodsInterface {
     final Double [] presentPrices = {   6.00, 45.030, 1.230//, 32.930, 6.990
     };
 
+*/
 
 
 

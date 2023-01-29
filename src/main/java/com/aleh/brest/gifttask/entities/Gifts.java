@@ -1,6 +1,9 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Gifts {
 
@@ -9,7 +12,7 @@ public class Gifts {
     private Double priceGift;
 
     public Gifts(List<Goods> giftIn) {
-        this.gift = giftIn;
+        this.gift = sortListGoods(giftIn);
         this.volumeGift = encountVolumeGift(this.gift);
         this.priceGift = encountPriceGift(this.gift);
     }
@@ -70,4 +73,45 @@ public class Gifts {
                 "}\n";
     }
 
+
+    @Override
+    public boolean equals(Object gift) {
+        Gifts giftNew;
+        if (this.hashCode() == gift.hashCode()){
+            return true;
+        }
+          if (gift instanceof Gifts){
+                giftNew = (Gifts) gift;
+                this.setGift(sortListGoods(this.getGift()));
+                giftNew.setGift(sortListGoods(giftNew.getGift()));
+                    if (giftNew.getGift().size() == this.getGift().size()){
+                           List <Goods> thisGoods = this.getGift();
+                           List <Goods> giftGoods = giftNew.getGift();
+                           for (int i = 0 ; i < thisGoods.size(); i++){
+                               if (!thisGoods.get(i).equals(giftGoods.get(i))){
+                                   return false;
+                               }
+                           }
+
+                    } else {
+                        return false;
+                    }
+
+          } else {
+                    return false;
+                 }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gift, volumeGift, priceGift);
+    }
+
+    private List<Goods> sortListGoods (List <Goods> unsotedList) {
+        return unsotedList.stream()
+                .sorted(Comparator.comparingLong(Goods::getIdGood))
+                .collect(Collectors.toList());
+    }
 }

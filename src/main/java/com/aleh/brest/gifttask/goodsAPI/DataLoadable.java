@@ -13,7 +13,7 @@ public interface DataLoadable {
     Optional  <TaskConditions> loadTaskConditionsFromInterface();
 
     List<Goods> loadDataGoods(Long [] id, String [] names
-            , Double [] volumes, Double [] prices);
+            , Double [] volumes, Double [] prices, Integer [] quantities);
 
     TaskConditions loadTaskConditions(Double budgetAll
             , Double bagVolumeAll, Integer peopleNumAll);

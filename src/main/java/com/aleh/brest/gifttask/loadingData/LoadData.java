@@ -18,8 +18,9 @@ public class LoadData implements DataLoadable, GoodsInterface, TaskConditionsInt
         List<Goods> storeGoods = new ArrayList<>();
         Optional<List<Goods>> storeGoodsOptional = Optional.of(storeGoods);
         try {
-            for (int i = 0; i < presentNames.length; i++) {
-                storeGoods.add(new Goods(idGoods[i],presentNames[i], presentVolumes[i], presentPrices[i]));
+            for (int i = 0; i < GoodsInterface.presentNames.length; i++) {
+                storeGoods.add(new Goods(GoodsInterface.idGoods[i],GoodsInterface.presentNames[i], GoodsInterface.presentVolumes[i]
+                                       , GoodsInterface.presentPrices[i], GoodsInterface.presentQuantity [i]));
             }
         } catch (ObjectCollectedException e) {
             return storeGoodsOptional;
@@ -46,11 +47,11 @@ public class LoadData implements DataLoadable, GoodsInterface, TaskConditionsInt
 
    @Override
     public List<Goods> loadDataGoods(Long [] id, String [] names
-                                   , Double [] volumes, Double [] prices) {
+                                   , Double [] volumes, Double [] prices, Integer [] quantities) {
         List<Goods> storeGoods = new ArrayList<>();
         try {
-            for (int i = 0; i < presentNames.length; i++) {
-                storeGoods.add(new Goods(id[i],names[i], volumes [i], prices[i]));
+            for (int i = 0; i < names.length; i++) {
+                storeGoods.add(new Goods(id[i],names[i], volumes [i], prices[i], quantities[i]));
             }
         } catch (ObjectCollectedException e) {
             return storeGoods;

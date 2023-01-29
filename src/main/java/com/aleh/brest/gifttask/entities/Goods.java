@@ -8,14 +8,25 @@ public class Goods {
     private Double presentVolume;
     private Double presentPrice;
 
+    private Integer quantity;
+
     public Goods() {
     }
 
-    public Goods(long idGood, String goodName, Double presentVolume, Double presentPrice) {
+    public Goods(long idGood, String goodName, Double presentVolume, Double presentPrice, Integer quantity) {
         this.idGood = idGood;
         this.goodName = goodName;
         this.presentVolume = presentVolume;
         this.presentPrice = presentPrice;
+        this.quantity = quantity;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public String getGoodName() {
@@ -62,12 +73,15 @@ public class Goods {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this.hashCode() == o.hashCode()) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Goods goods = (Goods) o;
-        return idGood == goods.idGood && Objects.equals(goodName, goods.goodName)
-                && Objects.equals(presentVolume, goods.presentVolume)
-                && Objects.equals(presentPrice, goods.presentPrice);
+        if (this.getIdGood() == goods.getIdGood()){
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     @Override

@@ -1,4 +1,7 @@
-[GiftsInBag{bagWithGifts=[Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
+[
+
+
+GiftsInBag{bagWithGifts=[Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
 , Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
 , Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
 , Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0}
@@ -46,5 +49,8 @@
 ]
 , volumeGift=7.65
 , priceGift=30.0}
-], deltaToBudget=0.009999999999990905}]
+], deltaToBudget=0.009999999999990905} 
+
+
+]
 0.009999999999990905
