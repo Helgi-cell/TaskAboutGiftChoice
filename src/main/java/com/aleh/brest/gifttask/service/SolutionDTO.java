@@ -18,7 +18,7 @@ public class SolutionDTO {
     public TaskConditions taskCondition;
     public List<Gifts> bagGifts;
     public List<GiftsInBag> resultGifts;
-    public Integer criteria = 1;
+    public Integer criteria = 4;
     public Double delta;
 
     public SolutionDTO(List<Goods> goodsList, TaskConditions taskCondition) {
@@ -181,33 +181,30 @@ public class SolutionDTO {
     }
 
     private Boolean isQuantityGifts(Gifts gift){
-         gift.setGift(sortListGoods(gift.getGift()));
-         List <Goods> goods = gift.getGift();
-         Long id = 0L;
-         Integer num = 0;
-        for (Goods good:goods) {
-           if (id == 0){
-               id = good.getIdGood();
-              // num++;
-           }
-
-           if (id == good.getIdGood() ){
-               num++;
-               if (num > good.getQuantity()){
-                   return false;
+       if (gift.getGift().size() == 0){
+           return false;
+       } else {
+           Long id = 0L;
+           int i = 0;
+           for (Goods good : gift.getGift()) {
+               if (id == 0L) {
+                   id = good.getIdGood();
+                   i++;
+               } else {
+                   if (id == good.getIdGood()) {
+                       i++;
+                       if (i > good.getQuantity()) {
+                           return false;
+                       }
+                   } else {
+                       if (id != good.getIdGood()) {
+                           id = good.getIdGood();
+                           i = 1;
+                       }
+                   }
                }
            }
-
-           if (id != 0 && id != good.getIdGood()){
-               id = good.getIdGood();
-               num = 1;
-               if (num > good.getQuantity()){
-                   return false;
-               }
-           }
-
-        }
-
+       }
          return true;
     }
 

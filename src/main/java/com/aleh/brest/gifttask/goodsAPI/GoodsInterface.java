@@ -4,7 +4,7 @@ public interface GoodsInterface {
 
 
 
-/*
+
 
     final Long [] idGoods = { 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L };
 
@@ -19,7 +19,7 @@ public interface GoodsInterface {
                                     };
 
     final Double [] presentPrices = {   12.230, 45.030, 12.230, 32.930
-                                    ,    6.990,  0.460,  7.340, 65.980
+                                    ,    6.990,  5.460,  7.340, 65.980
                                     ,  152.130,  7.230, 10.00, 25.250
                                     };
 
@@ -31,12 +31,13 @@ public interface GoodsInterface {
 
 
 
-*/
 
 
 
 
 
+
+/*
 
     final Long [] idGoods = { 1L, 2L, 3L//, 4L, 5L
     };
@@ -55,6 +56,7 @@ public interface GoodsInterface {
                                 };
 
 
+*/
 
 
 
