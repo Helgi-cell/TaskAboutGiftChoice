@@ -5,6 +5,9 @@ import com.aleh.brest.gifttask.entities.GiftsInBag;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -15,7 +18,7 @@ public class SolutionDTO {
     public TaskConditions taskCondition;
     public List<Gifts> bagGifts;
     public List<GiftsInBag> resultGifts;
-    public Integer criteria = 4;
+    public Integer criteria = 1;
     public Double delta;
 
     public SolutionDTO(List<Goods> goodsList, TaskConditions taskCondition) {
@@ -30,31 +33,31 @@ public class SolutionDTO {
     public void createGifts() {
         initGifts();
         System.out.println("\n\n=====================\nGift list possible - >\n\n " + bagGifts + "\n\n==================\n\n\n");
-        while(this.bagGifts.size() > 0) {
+        while(this.bagGifts.size() != 0) {
             getBagsWithGifts();
-            this.bagGifts = encountGifts();
+            this.bagGifts = encountGifts(this.bagGifts);
 
             System.out.println("\n\n=====================\nGift list possible - > \n\n" + bagGifts + "\n\n==================\n\n\n");
-          /*  System.out.println("\n\n=====================\nGift list possible - > " + resultGifts + "\n\n==================\n\n\n");
+            System.out.println("\n\n=====================\nGift list possible - > " + resultGifts + "\n\n==================\n\n\n");
             System.out.println("\n Bag with gifts -> \n\n" + this.bagGifts + "\n size = " + this.bagGifts.size() + "\n=================\n\n");
-*/
+
 
         }
     }
 
     private List<Gifts> initGifts() {
         Gifts gift ;
-        for (int i = 0; i < goodsList.size(); i++){
-            if ((goodsList.get(i).getPresentPrice() > taskCondition.getBudget())
-                    || (goodsList.get(i).getPresentVolume() > taskCondition.getBagVolume())){
+        for (int i = 0; i < this.goodsList.size(); i++){
+            if ((this.goodsList.get(i).getPresentPrice() > this.taskCondition.getBudget())
+                    || (this.goodsList.get(i).getPresentVolume() > this.taskCondition.getBagVolume())){
                 goodsList.remove(i);
                 i = 0;
             }
         }
 
-        for (int i = 0; i < goodsList.size(); i++) {
+        for (int i = 0; i < this.goodsList.size(); i++) {
             List<Goods> goods = new ArrayList<>();
-            goods.add(cloneGood(goodsList.get(i)));
+            goods.add(cloneGood(this.goodsList.get(i)));
             gift = new Gifts(goods);
             this.bagGifts.add(gift);
         }
@@ -62,26 +65,40 @@ public class SolutionDTO {
     }
 
 
-    private List<Gifts> encountGifts() {
-        List<Gifts> newGifts = new ArrayList<>();
-        Gifts newGift = null;
-        List<Goods> goods = null;
-        for (Gifts gift : this.bagGifts) {
+    private List<Gifts> encountGifts(List<Gifts> gifts) {
+      /*  try{
+        PrintStream outGift = new PrintStream(new FileOutputStream("GiftsOut.log"));
+        System.setOut(outGift);
+        } catch (FileNotFoundException e){
+            System.out.println(e);
+        }*/
 
+        List<Gifts> newGifts = new ArrayList<>();
+        Gifts newGift ;
+        List<Goods> newGoods;
+        for (Gifts gift : gifts) {
             for (int i = 0; i < goodsList.size(); i++) {
-                List<Goods> newGoods = new ArrayList<>();
                 newGoods = cloneListGoods(gift.getGift());
+                //newGoods = cloneListGoods(gift.getGift());
+                newGoods.add(cloneGood(goodsList.get(i)));
                 newGift = new Gifts(newGoods);
-                newGift.insertGood(cloneGood(goodsList.get(i)));
+                //newGift.insertGood(cloneGood(goodsList.get(i)));
+                //newGift = s(newGifts);
                 if((newGift.getPriceGift() < taskCondition.getBudget()/criteria)
                         && (newGift.getVolumeGift() < taskCondition.getBagVolume()/criteria)
                         && (isQuantityGifts(newGift))) {
                     newGifts.add(newGift);
+
+
                 }
             }
         }
-        newGifts = sortListGifts(newGifts);
-        return deleteEqualsListGifts(newGifts);
+
+        //System.out.println("\n\n" + newGift + "\n\n");
+        if (newGifts.size() > 1){
+        newGifts = deleteEqualsListGifts(newGifts);
+        }
+        return newGifts;
     }
 
 
@@ -100,16 +117,17 @@ public class SolutionDTO {
             }
             giftsInBag = new GiftsInBag(giftsList, taskCondition);
 
+
             if (isQuantityGiftsInBag(giftsInBag)) {
 
-                if (Math.abs(giftsInBag.getDeltaToBudget() - delta) < 0.02) {
+                if (Math.abs(giftsInBag.getDeltaToBudget() - delta) < 0.001) {
                     this.resultGifts.add(giftsInBag);
-                    resultGifts = deleteSimilarGiftsInBag(resultGifts);
+                    this.resultGifts = deleteSimilarGiftsInBag(resultGifts);
                 } else {
                     if (giftsInBag.getDeltaToBudget() < delta
                             && giftsInBag.getDeltaToBudget() > 0) {
                         this.resultGifts = new ArrayList<>();
-                        resultGifts.add(cloneGiftsInBag(giftsInBag));
+                        this.resultGifts.add(cloneGiftsInBag(giftsInBag));
                         delta = giftsInBag.getDeltaToBudget();
                     }
                 }
@@ -117,28 +135,50 @@ public class SolutionDTO {
             giftsList = new ArrayList<>();
             incrementMatrix(matrix);
         } while (!isMatrixComplete(matrix));
+       /* if (this.resultGifts.size() > 1){
+        this.resultGifts = deleteSimilarGiftsInBag(resultGifts);
+        }*/
     }
 
     private List<GiftsInBag> deleteSimilarGiftsInBag(List<GiftsInBag> result){
-        List<GiftsInBag> newResult = new ArrayList<>();
-        for (GiftsInBag inBag : result) {
-            newResult.add(inBag);
-        }
-        if (result.size() > 1) {
-            for (int i = 0; i < newResult.size() - 1; i++) {
-                for (int j = newResult.size() - 1; j > 0 ; j--) {
-                    if (newResult.get(i).equals(newResult.get(j))){
-                        newResult.remove(j);
-                        newResult = deleteSimilarGiftsInBag(newResult);
+        if (result.size() < 2) {
+            return result;
+        } else {
+            for (int i = 0; i <= result.size() - 2; i++) {
+                for (int j = result.size() - 1; j > i; j--) {
+                    if (result.get(i).equals(result.get(j))) {
+                        result.remove(j);
+                        if (result.size() > 1) {
+                            return deleteSimilarGiftsInBag(result);
+                        } else {
+                            return result;
+                        }
+                        }
+                    }
+                }
+            }
+
+        return result;
+    }
+
+
+    private List<Gifts> deleteEqualsListGifts(List <Gifts> giftsList){
+        if (giftsList.size() < 2){
+            return giftsList;
+        } else {
+            for (int i = 0; i <= giftsList.size() - 2; i++) {
+                for (int j = giftsList.size() - 1; j > i; j--) {
+                    if (giftsList.get(i).equals(giftsList.get(j))) {
+                        giftsList.remove(j);
+                        if (giftsList.size() > 1) {
+                            return deleteEqualsListGifts(giftsList);
+                        } else return giftsList;
                     }
                 }
             }
         }
-
-
-        return newResult;
+        return giftsList;
     }
-
 
     private Boolean isQuantityGifts(Gifts gift){
          gift.setGift(sortListGoods(gift.getGift()));
@@ -146,20 +186,26 @@ public class SolutionDTO {
          Long id = 0L;
          Integer num = 0;
         for (Goods good:goods) {
-           if (id != good.getIdGood()){
-               if (num != 0){
-                   if (num > good.getQuantity()){
-                       return false;
-                   }
-               }
+           if (id == 0){
                id = good.getIdGood();
-               num = 1;
-           } else {
+              // num++;
+           }
+
+           if (id == good.getIdGood() ){
                num++;
                if (num > good.getQuantity()){
                    return false;
                }
            }
+
+           if (id != 0 && id != good.getIdGood()){
+               id = good.getIdGood();
+               num = 1;
+               if (num > good.getQuantity()){
+                   return false;
+               }
+           }
+
         }
 
          return true;
@@ -181,27 +227,6 @@ public class SolutionDTO {
             num = 0;
         }
         return true;
-    }
-
-
-    public Gifts cloneGift(Gifts gift) {
-        return new Gifts(gift.getGift());
-    }
-
-    public Goods cloneGood(Goods good) {
-        return new Goods(good.getIdGood(), good.getGoodName(), good.getPresentVolume(), good.getPresentPrice(), good.getQuantity());
-    }
-
-    public List<Goods> cloneListGoods(List<Goods> goods) {
-        List<Goods> clonedGoods = new ArrayList<>();
-        for (Goods good : goods) {
-            clonedGoods.add(new Goods(good.getIdGood(), good.getGoodName(), good.getPresentVolume(), good.getPresentPrice(), good.getQuantity()));
-        }
-        return clonedGoods;
-    }
-
-    private GiftsInBag cloneGiftsInBag(GiftsInBag giftsInBag){
-        return new GiftsInBag(giftsInBag.getBagWithGifts(), taskCondition);
     }
 
 
@@ -232,6 +257,11 @@ public class SolutionDTO {
         }
         return isTrue;
     }
+
+
+
+
+
 
     private Boolean[][] initMatrix(Integer numPersons, List<Gifts> listGifts) {
         Boolean[][] matrix = new Boolean[numPersons][listGifts.size()];
@@ -284,21 +314,40 @@ public class SolutionDTO {
         return matrix;
     }
 
-    private List<Gifts> deleteEqualsListGifts(List <Gifts> giftsList){
-        if (giftsList.size() < 2){
-            return giftsList;
-        }
-        for (int i = 0 ; i < giftsList.size() - 2; i++) {
-            for (int j = i + 1; j < giftsList.size() - 1; j++) {
-                if (giftsList.get(i).equals(giftsList.get(j))){
-                    giftsList.remove(j);
-                    return deleteEqualsListGifts(giftsList);
-                }
-            }
-        }
 
-        return giftsList;
+
+
+    public Gifts cloneGift(Gifts gift) {
+        List<Goods> goods = cloneListGoods(gift.getGift());
+        return new Gifts(goods);
     }
+
+    public List<Gifts> cloneListGift(List<Gifts> gifts) {
+        List<Gifts> newGifts = new ArrayList<>();
+        for(Gifts gift:gifts){
+            newGifts.add(cloneGift(gift));
+        }
+        return newGifts;
+    }
+
+    public Goods cloneGood(Goods good) {
+        return new Goods(good.getIdGood(), good.getGoodName(), good.getPresentVolume(), good.getPresentPrice(), good.getQuantity());
+    }
+
+    public List<Goods> cloneListGoods(List<Goods> goods) {
+        List<Goods> clonedGoods = new ArrayList<>();
+        for (Goods good : goods) {
+            clonedGoods.add(new Goods(good.getIdGood(), good.getGoodName(), good.getPresentVolume(), good.getPresentPrice(), good.getQuantity()));
+        }
+        return clonedGoods;
+    }
+
+    private GiftsInBag cloneGiftsInBag(GiftsInBag giftsInBag){
+        List<Gifts> gifts = cloneListGift(giftsInBag.getBagWithGifts());
+        return new GiftsInBag(gifts, taskCondition);
+    }
+
+
 
 } // end class
 

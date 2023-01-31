@@ -78,13 +78,13 @@ class GifttaskApplicationTests {
 		String [] presentNames = {  "Glasses", "BoomBox", "Laundry"//, "Printer", "Firemaker"
 		};
 
-		Double [] presentVolumes = {1.530, 3.110, 74.530//, 6.00, 1.040
+		Double [] presentVolumes = {1.530, 24.110, 74.530//, 6.00, 1.040
 		};
 
-		Double [] presentPrices = { 6.00, 45.00, 55.230//, 32.930, 6.990
+		Double [] presentPrices = { 6.00, 18.00, 55.230//, 32.930, 6.990
 		};
 
-		Integer [] presentQuantities = {   80, 7, 1//, 32.930, 6.990
+		Integer [] presentQuantities = {30, 7, 1//, 3, 6
 		};
 
 		Double budget = 180.01;
@@ -112,7 +112,7 @@ class GifttaskApplicationTests {
 		System.out.println(solution.resultGifts);
 		System.out.println(solution.delta);
 
-		//Assertions.assertTrue(solution.resultGifts.size() > 0);
+		//Assertions.assertTrue(solution.bagGifts.size() == 0);
 	}
 
 

@@ -68,6 +68,7 @@ public class Goods {
                 ", goodName='" + goodName + '\'' +
                 ", presentVolume=" + presentVolume +
                 ", presentPrice=" + presentPrice +
+                ", quantity" + quantity +
                 '}'+ "\n";
     }
 
