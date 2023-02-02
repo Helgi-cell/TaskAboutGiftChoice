@@ -72,19 +72,19 @@ class GifttaskApplicationTests {
 	@Test
 	void isResult () throws FileNotFoundException {
 
-		Long [] idGoods = { 1L, 2L, 3L, 4L//, 5L, 6L
+		Long [] idGoods = { 1L, 2L, 3L//, 4L, 5L, 6L
 		};
 
-		String [] presentNames = {  "Glasses", "BoomBox", "Laundry", "Printer"//, "Firemaker", "Lego"
+		String [] presentNames = {  "Glasses", "BoomBox", "Laundry"//, "Printer", "Firemaker", "Lego"
 		};
 
-		Double [] presentVolumes = {1.530, 3.110, 74.530, 6.00//, 1.040, 5.02
+		Double [] presentVolumes = {1.530, 3.110, 74.530//, 6.00, 1.040, 5.02
 		};
 
-		Double [] presentPrices = { 6.00, 18.00, 55.230, 32.930//, 6.990, 12.01
+		Double [] presentPrices = { 6.00, 18.00, 55.230//, 32.930, 6.990, 12.01
 		};
 
-		Integer [] presentQuantities = {34, 7, 1, 3//, 6, 8
+		Integer [] presentQuantities = {29, 1, 1//, 3, 6, 8
 		};
 
 		Double budget = 180.01;
@@ -102,10 +102,10 @@ class GifttaskApplicationTests {
 		PrintStream outCondition = new PrintStream(new FileOutputStream("testtaskconditionsout.log"));
 		PrintStream outResult = new PrintStream(new FileOutputStream("testresultsout.log"));
 
-		System.setOut(outCondition);
+		System.setOut(outResult);
 		System.out.println(taskConditions);
 
-		System.setOut(outGoods);
+		System.setOut(outResult);
 		System.out.println(goodsList);
 
 		System.setOut(outResult);

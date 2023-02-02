@@ -18,7 +18,7 @@ public class SolutionDTO {
     public TaskConditions taskCondition;
     public List<Gifts> bagGifts;
     public List<GiftsInBag> resultGifts;
-    public Integer criteria = 4;
+    public Integer criteria = 1;
     public Double delta;
 
     public SolutionDTO(List<Goods> goodsList, TaskConditions taskCondition) {
