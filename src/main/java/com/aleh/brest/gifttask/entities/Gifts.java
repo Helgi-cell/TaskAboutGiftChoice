@@ -1,5 +1,6 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -66,11 +67,29 @@ public class Gifts {
 
     @Override
     public String toString() {
-        return "Gifts{" +
-                "gift=" + gift +
-                "\n, volumeGift=" + volumeGift +
-                "\n, priceGift=" + priceGift +
-                "}\n";
+
+        String giftString = "";
+        int sztuc = 0;
+        Long id = 0L;
+        for (Goods good:this.gift) {
+            if (id == 0L){
+                giftString = giftString + good.getGoodName() + " = ";
+                sztuc++;
+                id = good.getIdGood();
+            } else {
+                if (id == good.getIdGood()) {
+                    sztuc++;
+                } else {
+                    giftString = giftString + sztuc + "sz.  ";
+                    id = good.getIdGood();
+                    sztuc = 1;
+                    giftString = giftString + good.getGoodName() + " = ";
+                }
+            }
+            }
+        giftString = giftString + sztuc + "sz.";
+
+        return giftString;
     }
 
 

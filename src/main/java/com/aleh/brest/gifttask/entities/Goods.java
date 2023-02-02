@@ -63,13 +63,13 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods{" +
+        return "Goods{\n" +
                 "idGood=" + idGood +
                 ", goodName='" + goodName + '\'' +
                 ", presentVolume=" + presentVolume +
                 ", presentPrice=" + presentPrice +
                 ", quantity" + quantity +
-                '}'+ "\n";
+                '}'+ "\n----------------------------------\n";
     }
 
     @Override

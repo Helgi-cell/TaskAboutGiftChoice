@@ -1,7 +1,13 @@
 INPUT LIST GOODS SHOULD ANALIZED =>
-[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=19.1, quantity3}
-, Goods{idGood=3, goodName='Laundry', presentVolume=74.53, presentPrice=55.23, quantity1}
+[Goods{
+idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity31}
+----------------------------------
+, Goods{
+idGood=2, goodName='BoomBox', presentVolume=4.11, presentPrice=18.0, quantity7}
+----------------------------------
+, Goods{
+idGood=3, goodName='Laundry', presentVolume=74.53, presentPrice=55.23, quantity1}
+----------------------------------
 ]
 
 
@@ -10,67 +16,189 @@ TaskConditions{budget=180.01, bagVolume=64.11, peopleNum=6}
 
 
 LIST have been ANALIZED =>
-[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=19.1, quantity3}
+[Goods{
+idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity31}
+----------------------------------
+, Goods{
+idGood=2, goodName='BoomBox', presentVolume=4.11, presentPrice=18.0, quantity7}
+----------------------------------
 ]
 
 
 RESULT = >
-[
+GiftsInBag =>
+BoomBox = 3sz.
+BoomBox = 3sz.
+Glasses = 3sz.
+Glasses = 3sz.
+Glasses = 3sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
 
 
-GiftsInBag{bagWithGifts=[Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
-]
-, volumeGift=7.65
-, priceGift=30.0}
-], deltaToBudget=0.009999999999990905} 
+
+RESULT = >
+GiftsInBag =>
+BoomBox = 3sz.
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 3sz.
+Glasses = 3sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
 
 
-]
+
+RESULT = >
+GiftsInBag =>
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 3sz.
+Glasses = 3sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+BoomBox = 3sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 3sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 3sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 1sz.  BoomBox = 2sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 3sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02000000000001
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+Glasses = 2sz.  BoomBox = 1sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 43.02
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 1sz.  BoomBox = 3sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 44.459999999999994
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 2sz.  BoomBox = 2sz.
+Glasses = 3sz.  BoomBox = 1sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 44.459999999999994
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 3sz.  BoomBox = 1sz.
+Glasses = 3sz.  BoomBox = 1sz.
+Glasses = 3sz.  BoomBox = 1sz.
+Glasses = 4sz.
+Glasses = 4sz.
+Glasses = 4sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 44.459999999999994
+CHANGE = 0.009999999999990905
+======================
+
+
+
+RESULT = >
+GiftsInBag =>
+Glasses = 5sz.
+Glasses = 5sz.
+Glasses = 5sz.
+Glasses = 5sz.
+Glasses = 5sz.
+Glasses = 5sz.
+
+ Price of Bag = 180.0
+ Volume of Bag = 45.9
+CHANGE = 0.009999999999990905
+======================
+
 
 
 CHANGE =>0.009999999999990905

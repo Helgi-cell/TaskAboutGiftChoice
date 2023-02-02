@@ -1,5 +1,6 @@
 package com.aleh.brest.gifttask;
 
+import com.aleh.brest.gifttask.entities.GiftsInBag;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
 import com.aleh.brest.gifttask.goodsAPI.DataLoadable;
@@ -78,13 +79,13 @@ class GifttaskApplicationTests {
 		String [] presentNames = {  "Glasses", "BoomBox", "Laundry"//, "Printer", "Firemaker", "Lego"
 		};
 
-		Double [] presentVolumes = {1.530, 3.110, 74.530//, 6.00, 1.040, 5.02
+		Double [] presentVolumes = {1.530, 4.110, 74.530//, 6.00, 1.040, 5.02
 		};
 
-		Double [] presentPrices = { 6.00, 19.10, 55.230//, 32.930, 6.990, 12.01
+		Double [] presentPrices = { 6.00, 18.00, 55.230//, 32.930, 6.990, 12.01
 		};
 
-		Integer [] presentQuantities = {33, 3, 1//, 3, 6, 8
+		Integer [] presentQuantities = {31, 7, 1//, 3, 6, 8
 		};
 
 		Double budget = 180.01;
@@ -110,14 +111,17 @@ class GifttaskApplicationTests {
 		solution.createGifts();
 
 
-		//System.setOut(outResult);
+
 		System.out.println("TASK CONDITIONS =>\n" + taskConditions + "\n\n");
 
-		//System.setOut(outResult);
+
 		System.out.println("LIST have been ANALIZED =>\n" + goodsList + "\n\n");
 
-		//System.setOut(outResult);
-		System.out.println("RESULT = >\n" + solution.resultGifts + "\n\n");
+		for (GiftsInBag giftInBag: solution.resultGifts) {
+			System.out.println("RESULT = >\n" + giftInBag + "\n\n");
+		}
+
+
 		System.out.println("CHANGE =>" + solution.delta + "\n\n");
 
 		//Assertions.assertTrue(solution.bagGifts.size() == 0);

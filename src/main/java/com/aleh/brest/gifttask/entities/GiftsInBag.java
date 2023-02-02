@@ -1,6 +1,5 @@
 package com.aleh.brest.gifttask.entities;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +18,23 @@ public class GiftsInBag {
     }
 
 
-    private Boolean encountVolumeBag(List<Gifts> bagGifts) {
+    private Double howVolumeBag(List<Gifts> bagGifts){
+        Double volumeBag = 0.0;
+        for (Gifts gift : bagGifts) {
+            volumeBag += gift.getVolumeGift();
+        }
+        return volumeBag;
+    }
+
+    private Double howPriceBag(List<Gifts> bagGifts){
+        Double priceBag = 0.0;
+        for (Gifts gift : bagGifts) {
+            priceBag += gift.getPriceGift();
+        }
+        return priceBag;
+    }
+
+    private Boolean isEncountVolumeBag(List<Gifts> bagGifts) {
         Double volumeBag = 0.0;
         for (Gifts gift : bagGifts) {
             volumeBag += gift.getVolumeGift();
@@ -31,7 +46,7 @@ public class GiftsInBag {
         }
     }
 
-    private Boolean encountPriceBag(List<Gifts> bagGifts) {
+    private Boolean isEncountPriceBag(List<Gifts> bagGifts) {
         Double priceBag = 0.0;
         for (Gifts gift : bagGifts) {
             priceBag += gift.getPriceGift();
@@ -44,7 +59,7 @@ public class GiftsInBag {
     }
 
     private Double encountDeltaBudget() {
-        if (encountPriceBag(this.bagWithGifts) && encountVolumeBag(this.bagWithGifts)){
+        if (isEncountPriceBag(this.bagWithGifts) && isEncountVolumeBag(this.bagWithGifts)){
             Double delta = 0.0;
             for (Gifts gift:this.bagWithGifts ) {
                 delta += gift.getPriceGift();
@@ -76,10 +91,14 @@ public class GiftsInBag {
 
     @Override
     public String toString() {
-        return "\n\n\nGiftsInBag{" +
-                "bagWithGifts=" + bagWithGifts +
-                ", deltaToBudget=" + deltaToBudget +
-                "} \n\n\n";
+        String bagString = "GiftsInBag =>\n";
+        for (Gifts gift:this.bagWithGifts) {
+            bagString += gift.toString() + "\n";
+        }
+        bagString = bagString + "\n Price of Bag = " + howPriceBag(bagWithGifts)
+                                + "\n Volume of Bag = " + howVolumeBag(bagWithGifts)
+                                + "\nCHANGE = " + deltaToBudget + "\n======================\n";
+        return bagString;
     }
 
     @Override
