@@ -54,7 +54,7 @@ class GifttaskApplicationTests {
 		Double [] presentPrices = {   6.00, 45.030, 1.230//, 32.930, 6.990
 		};
 
-		Integer [] presentQuantities = {   30, 2, 1//, 32, 6
+		Integer [] presentQuantities = {   30, 5, 1//, 32, 6
 		};
 
 		DataLoadable loadData = new LoadData();
@@ -81,36 +81,44 @@ class GifttaskApplicationTests {
 		Double [] presentVolumes = {1.530, 3.110, 74.530//, 6.00, 1.040, 5.02
 		};
 
-		Double [] presentPrices = { 6.00, 18.00, 55.230//, 32.930, 6.990, 12.01
+		Double [] presentPrices = { 6.00, 19.10, 55.230//, 32.930, 6.990, 12.01
 		};
 
-		Integer [] presentQuantities = {29, 1, 1//, 3, 6, 8
+		Integer [] presentQuantities = {33, 3, 1//, 3, 6, 8
 		};
 
 		Double budget = 180.01;
 		Double bagVolume = 64.11;
 		Integer peopleNum = 6;
 
+
 		DataLoadable loadData = new LoadData();
 		List <Goods> goodsList = loadData.loadDataGoods(idGoods, presentNames
 				, presentVolumes, presentPrices, presentQuantities) ;
+
+
+		PrintStream outResult = new PrintStream(new FileOutputStream("testresultsout.log"));
+		System.setOut(outResult);
+		System.out.println("INPUT LIST GOODS SHOULD ANALIZED =>\n" + goodsList + "\n\n");
+
+
 		TaskConditions taskConditions = new TaskConditions(budget, bagVolume, peopleNum);
+
+
 
 		SolutionDTO solution = new SolutionDTO(goodsList, taskConditions);
 		solution.createGifts();
-		PrintStream outGoods = new PrintStream(new FileOutputStream("testgoodslistout.log"));
-		PrintStream outCondition = new PrintStream(new FileOutputStream("testtaskconditionsout.log"));
-		PrintStream outResult = new PrintStream(new FileOutputStream("testresultsout.log"));
 
-		System.setOut(outResult);
-		System.out.println(taskConditions);
 
-		System.setOut(outResult);
-		System.out.println(goodsList);
+		//System.setOut(outResult);
+		System.out.println("TASK CONDITIONS =>\n" + taskConditions + "\n\n");
 
-		System.setOut(outResult);
-		System.out.println(solution.resultGifts);
-		System.out.println(solution.delta);
+		//System.setOut(outResult);
+		System.out.println("LIST have been ANALIZED =>\n" + goodsList + "\n\n");
+
+		//System.setOut(outResult);
+		System.out.println("RESULT = >\n" + solution.resultGifts + "\n\n");
+		System.out.println("CHANGE =>" + solution.delta + "\n\n");
 
 		//Assertions.assertTrue(solution.bagGifts.size() == 0);
 	}

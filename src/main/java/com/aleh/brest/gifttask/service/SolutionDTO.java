@@ -32,14 +32,16 @@ public class SolutionDTO {
 
     public void createGifts() {
         initGifts();
-        System.out.println("\n\n=====================\nGift list possible - >\n\n " + bagGifts + "\n\n==================\n\n\n");
+        //System.out.println("\n\n=====================\nGift list possible - >\n\n " + bagGifts + "\n\n==================\n\n\n");
         while(this.bagGifts.size() != 0) {
             getBagsWithGifts();
             this.bagGifts = encountGifts(this.bagGifts);
+/*
 
             System.out.println("\n\n=====================\nGift list possible - > \n\n" + bagGifts + "\n\n==================\n\n\n");
             System.out.println("\n\n=====================\nGift list possible - > " + resultGifts + "\n\n==================\n\n\n");
             System.out.println("\n Bag with gifts -> \n\n" + this.bagGifts + "\n size = " + this.bagGifts.size() + "\n=================\n\n");
+*/
 
 
         }
@@ -93,8 +95,6 @@ public class SolutionDTO {
                 }
             }
         }
-
-        //System.out.println("\n\n" + newGift + "\n\n");
         if (newGifts.size() > 1){
         newGifts = deleteEqualsListGifts(newGifts);
         }
@@ -135,9 +135,6 @@ public class SolutionDTO {
             giftsList = new ArrayList<>();
             incrementMatrix(matrix);
         } while (!isMatrixComplete(matrix));
-       /* if (this.resultGifts.size() > 1){
-        this.resultGifts = deleteSimilarGiftsInBag(resultGifts);
-        }*/
     }
 
     private List<GiftsInBag> deleteSimilarGiftsInBag(List<GiftsInBag> result){

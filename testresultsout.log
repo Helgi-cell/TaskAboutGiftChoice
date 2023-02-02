@@ -1,54 +1,78 @@
-TaskConditions{budget=180.01, bagVolume=64.11, peopleNum=6}
-[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=18.0, quantity1}
+INPUT LIST GOODS SHOULD ANALIZED =>
+[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=19.1, quantity3}
+, Goods{idGood=3, goodName='Laundry', presentVolume=74.53, presentPrice=55.23, quantity1}
 ]
+
+
+TASK CONDITIONS =>
+TaskConditions{budget=180.01, bagVolume=64.11, peopleNum=6}
+
+
+LIST have been ANALIZED =>
+[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=19.1, quantity3}
+]
+
+
+RESULT = >
 [
 
 
-GiftsInBag{bagWithGifts=[Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=2, goodName='BoomBox', presentVolume=3.11, presentPrice=18.0, quantity1}
+GiftsInBag{bagWithGifts=[Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=7.699999999999999
-, priceGift=36.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
+, volumeGift=7.65
+, priceGift=30.0}
+, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=6.12
-, priceGift=24.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
+, volumeGift=7.65
+, priceGift=30.0}
+, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=6.12
-, priceGift=24.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
+, volumeGift=7.65
+, priceGift=30.0}
+, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=6.12
-, priceGift=24.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
+, volumeGift=7.65
+, priceGift=30.0}
+, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=6.12
-, priceGift=24.0}
-, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
-, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity29}
+, volumeGift=7.65
+, priceGift=30.0}
+, Gifts{gift=[Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
+, Goods{idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity33}
 ]
-, volumeGift=6.12
-, priceGift=24.0}
-], deltaToBudget=24.00999999999999} 
+, volumeGift=7.65
+, priceGift=30.0}
+], deltaToBudget=0.009999999999990905} 
 
 
 ]
-24.00999999999999
+
+
+CHANGE =>0.009999999999990905
+
+
