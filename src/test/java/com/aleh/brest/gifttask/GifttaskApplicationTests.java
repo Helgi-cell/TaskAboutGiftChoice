@@ -73,19 +73,19 @@ class GifttaskApplicationTests {
 	@Test
 	void isResult () throws FileNotFoundException {
 
-		Long [] idGoods = { 1L, 2L, 3L//, 4L, 5L, 6L
+		Long [] idGoods = { 1L, 2L, 3L, 4L//, 5L//, 6L
 		};
 
-		String [] presentNames = {  "Glasses", "BoomBox", "Laundry"//, "Printer", "Firemaker", "Lego"
+		String [] presentNames = {  "Glasses", "BoomBox", "Laundry", "Printer"//, "Firemaker"//, "Lego"
 		};
 
-		Double [] presentVolumes = {1.530, 4.110, 74.530//, 6.00, 1.040, 5.02
+		Double [] presentVolumes = {1.530, 4.110, 78.530, 6.00//, 1.040//, 5.02
 		};
 
-		Double [] presentPrices = { 6.00, 18.00, 55.230//, 32.930, 6.990, 12.01
+		Double [] presentPrices = { 6.00, 18.00, 55.230, 32.930//, 6.990//, 12.01
 		};
 
-		Integer [] presentQuantities = {31, 7, 1//, 3, 6, 8
+		Integer [] presentQuantities = {22, 4, 2, 5//, 5//, 8
 		};
 
 		Double budget = 180.01;
@@ -103,6 +103,7 @@ class GifttaskApplicationTests {
 		System.out.println("INPUT LIST GOODS SHOULD ANALIZED =>\n" + goodsList + "\n\n");
 
 
+
 		TaskConditions taskConditions = new TaskConditions(budget, bagVolume, peopleNum);
 
 
@@ -114,13 +115,17 @@ class GifttaskApplicationTests {
 
 		System.out.println("TASK CONDITIONS =>\n" + taskConditions + "\n\n");
 
-
+		System.out.println("ATTENTION!!!!\n" +
+				" MAX PRICE OF THE ONE GIFT =>\n" + (solution.taskCondition.getBudget()/solution.criteria) + "\n");
 		System.out.println("LIST have been ANALIZED =>\n" + goodsList + "\n\n");
 
-		for (GiftsInBag giftInBag: solution.resultGifts) {
-			System.out.println("RESULT = >\n" + giftInBag + "\n\n");
+		if (solution.resultGifts.size() == 0){
+			System.out.println("RESULT = >\n NO RESULTS" + "\n\n");
+		} else {
+			for (GiftsInBag giftInBag : solution.resultGifts) {
+				System.out.println("RESULT = >\n" + giftInBag + "\n\n");
+			}
 		}
-
 
 		System.out.println("CHANGE =>" + solution.delta + "\n\n");
 

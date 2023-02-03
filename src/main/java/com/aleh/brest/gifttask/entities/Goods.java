@@ -64,11 +64,11 @@ public class Goods {
     @Override
     public String toString() {
         return "Goods{\n" +
-                "idGood=" + idGood +
-                ", goodName='" + goodName + '\'' +
-                ", presentVolume=" + presentVolume +
-                ", presentPrice=" + presentPrice +
-                ", quantity" + quantity +
+                //"idGood =" + idGood +
+                ", goodName ='" + goodName + '\'' +
+                ", presentVolume =" + presentVolume +
+                ", presentPrice =" + presentPrice +
+                ", quantity =" + quantity +
                 '}'+ "\n----------------------------------\n";
     }
 

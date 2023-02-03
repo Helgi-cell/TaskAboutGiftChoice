@@ -1,0 +1,55 @@
+Goods{
+idGood=1, goodName='Glasses', presentVolume=4.53, presentPrice=12.23, quantity1}
+----------------------------------
+
+Goods{
+idGood=2, goodName='BoomBox', presentVolume=9.11, presentPrice=45.03, quantity1}
+----------------------------------
+
+Goods{
+idGood=3, goodName='Wallet', presentVolume=2.53, presentPrice=12.23, quantity1}
+----------------------------------
+
+INPUT LIST GOODS SHOULD ANALIZED =>
+[Goods{
+idGood=1, goodName='Glasses', presentVolume=4.53, presentPrice=12.23, quantity1}
+----------------------------------
+, Goods{
+idGood=2, goodName='BoomBox', presentVolume=9.11, presentPrice=45.03, quantity1}
+----------------------------------
+, Goods{
+idGood=3, goodName='Wallet', presentVolume=2.53, presentPrice=12.23, quantity1}
+----------------------------------
+]
+
+
+TaskConditions{budget=183.23, bagVolume=64.11, peopleNum=7}
+LIST have been ANALIZED =>
+[Goods{
+idGood=1, goodName='Glasses', presentVolume=4.53, presentPrice=12.23, quantity1}
+----------------------------------
+, Goods{
+idGood=2, goodName='BoomBox', presentVolume=9.11, presentPrice=45.03, quantity1}
+----------------------------------
+, Goods{
+idGood=3, goodName='Wallet', presentVolume=2.53, presentPrice=12.23, quantity1}
+----------------------------------
+]
+
+
+TASK CONDITIONS =>
+TaskConditions{budget=183.23, bagVolume=64.11, peopleNum=7}
+
+
+
+==============================
+Result BAG GIFT BEST let's see bottom : 
+
+
+The number of the bags is  : 0
+[]
+Change = 183.23
+=================================
+
+
+HURA!!!!!!!!!!!!!!!!!

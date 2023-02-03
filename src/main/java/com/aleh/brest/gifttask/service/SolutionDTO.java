@@ -4,10 +4,6 @@ import com.aleh.brest.gifttask.entities.Gifts;
 import com.aleh.brest.gifttask.entities.GiftsInBag;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -32,18 +28,9 @@ public class SolutionDTO {
 
     public void createGifts() {
         initGifts();
-        //System.out.println("\n\n=====================\nGift list possible - >\n\n " + bagGifts + "\n\n==================\n\n\n");
         while(this.bagGifts.size() != 0) {
             getBagsWithGifts();
             this.bagGifts = encountGifts(this.bagGifts);
-/*
-
-            System.out.println("\n\n=====================\nGift list possible - > \n\n" + bagGifts + "\n\n==================\n\n\n");
-            System.out.println("\n\n=====================\nGift list possible - > " + resultGifts + "\n\n==================\n\n\n");
-            System.out.println("\n Bag with gifts -> \n\n" + this.bagGifts + "\n size = " + this.bagGifts.size() + "\n=================\n\n");
-*/
-
-
         }
     }
 
@@ -68,30 +55,18 @@ public class SolutionDTO {
 
 
     private List<Gifts> encountGifts(List<Gifts> gifts) {
-      /*  try{
-        PrintStream outGift = new PrintStream(new FileOutputStream("GiftsOut.log"));
-        System.setOut(outGift);
-        } catch (FileNotFoundException e){
-            System.out.println(e);
-        }*/
-
         List<Gifts> newGifts = new ArrayList<>();
         Gifts newGift ;
         List<Goods> newGoods;
         for (Gifts gift : gifts) {
             for (int i = 0; i < goodsList.size(); i++) {
                 newGoods = cloneListGoods(gift.getGift());
-                //newGoods = cloneListGoods(gift.getGift());
                 newGoods.add(cloneGood(goodsList.get(i)));
                 newGift = new Gifts(newGoods);
-                //newGift.insertGood(cloneGood(goodsList.get(i)));
-                //newGift = s(newGifts);
                 if((newGift.getPriceGift() < taskCondition.getBudget()/criteria)
                         && (newGift.getVolumeGift() < taskCondition.getBagVolume()/criteria)
                         && (isQuantityGifts(newGift))) {
                     newGifts.add(newGift);
-
-
                 }
             }
         }
@@ -252,11 +227,6 @@ public class SolutionDTO {
         return isTrue;
     }
 
-
-
-
-
-
     private Boolean[][] initMatrix(Integer numPersons, List<Gifts> listGifts) {
         Boolean[][] matrix = new Boolean[numPersons][listGifts.size()];
         for (int i = 0; i < numPersons; i++) {
@@ -308,9 +278,6 @@ public class SolutionDTO {
         return matrix;
     }
 
-
-
-
     public Gifts cloneGift(Gifts gift) {
         List<Goods> goods = cloneListGoods(gift.getGift());
         return new Gifts(goods);
@@ -340,8 +307,6 @@ public class SolutionDTO {
         List<Gifts> gifts = cloneListGift(giftsInBag.getBagWithGifts());
         return new GiftsInBag(gifts, taskCondition);
     }
-
-
 
 } // end class
 

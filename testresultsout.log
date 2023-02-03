@@ -1,12 +1,15 @@
 INPUT LIST GOODS SHOULD ANALIZED =>
 [Goods{
-idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity31}
+, goodName ='Glasses', presentVolume =1.53, presentPrice =6.0, quantity =22}
 ----------------------------------
 , Goods{
-idGood=2, goodName='BoomBox', presentVolume=4.11, presentPrice=18.0, quantity7}
+, goodName ='BoomBox', presentVolume =4.11, presentPrice =18.0, quantity =4}
 ----------------------------------
 , Goods{
-idGood=3, goodName='Laundry', presentVolume=74.53, presentPrice=55.23, quantity1}
+, goodName ='Laundry', presentVolume =78.53, presentPrice =55.23, quantity =2}
+----------------------------------
+, Goods{
+, goodName ='Printer', presentVolume =6.0, presentPrice =32.93, quantity =5}
 ----------------------------------
 ]
 
@@ -15,126 +18,21 @@ TASK CONDITIONS =>
 TaskConditions{budget=180.01, bagVolume=64.11, peopleNum=6}
 
 
+ATTENTION!!!!
+ MAX PRICE OF THE ONE GIFT =>
+180.01
+
 LIST have been ANALIZED =>
 [Goods{
-idGood=1, goodName='Glasses', presentVolume=1.53, presentPrice=6.0, quantity31}
+, goodName ='Glasses', presentVolume =1.53, presentPrice =6.0, quantity =22}
 ----------------------------------
 , Goods{
-idGood=2, goodName='BoomBox', presentVolume=4.11, presentPrice=18.0, quantity7}
+, goodName ='BoomBox', presentVolume =4.11, presentPrice =18.0, quantity =4}
+----------------------------------
+, Goods{
+, goodName ='Printer', presentVolume =6.0, presentPrice =32.93, quantity =5}
 ----------------------------------
 ]
-
-
-RESULT = >
-GiftsInBag =>
-BoomBox = 3sz.
-BoomBox = 3sz.
-Glasses = 3sz.
-Glasses = 3sz.
-Glasses = 3sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-BoomBox = 3sz.
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 3sz.
-Glasses = 3sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 3sz.
-Glasses = 3sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-BoomBox = 3sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 3sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 3sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-Glasses = 1sz.  BoomBox = 2sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 3sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02000000000001
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-Glasses = 2sz.  BoomBox = 1sz.
-
- Price of Bag = 180.0
- Volume of Bag = 43.02
-CHANGE = 0.009999999999990905
-======================
-
 
 
 RESULT = >
@@ -180,22 +78,6 @@ Glasses = 4sz.
 
  Price of Bag = 180.0
  Volume of Bag = 44.459999999999994
-CHANGE = 0.009999999999990905
-======================
-
-
-
-RESULT = >
-GiftsInBag =>
-Glasses = 5sz.
-Glasses = 5sz.
-Glasses = 5sz.
-Glasses = 5sz.
-Glasses = 5sz.
-Glasses = 5sz.
-
- Price of Bag = 180.0
- Volume of Bag = 45.9
 CHANGE = 0.009999999999990905
 ======================
 
