@@ -3,6 +3,7 @@ package com.aleh.brest.gifttask.goodsAPI;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,5 +18,7 @@ public interface DataLoadable {
 
     TaskConditions loadTaskConditions(Double budgetAll
             , Double bagVolumeAll, Integer peopleNumAll);
+
+
     boolean insertNewGood (List<Goods> goods,Goods good);
 }

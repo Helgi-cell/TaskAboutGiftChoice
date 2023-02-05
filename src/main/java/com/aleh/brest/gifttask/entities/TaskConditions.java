@@ -1,13 +1,16 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.math.RoundingMode;
+
 public class TaskConditions {
     private Double budget;
     private Double bagVolume;
     private Integer peopleNum;
 
     public TaskConditions(Double budget, Double bagVolume, Integer peopleNum) {
-        this.budget = budget;
-        this.bagVolume = bagVolume;
+        //result.setScale(2, RoundingMode.HALF_UP);
+        this.budget = budget + 0.0001 ;
+        this.bagVolume = bagVolume + 0.0001 ;
         this.peopleNum = peopleNum;
     }
 

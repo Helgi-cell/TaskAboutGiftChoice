@@ -14,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -73,45 +74,66 @@ class GifttaskApplicationTests {
 	@Test
 	void isResult () throws FileNotFoundException {
 
-		Long [] idGoods = { 1L, 2L, 3L, 4L//, 5L//, 6L
+
+
+		Long [] idGoods = { 1L, 2L, 3L, 4L//, 5L, 6L
 		};
 
-		String [] presentNames = {  "Glasses", "BoomBox", "Laundry", "Printer"//, "Firemaker"//, "Lego"
+		String [] presentNames = {  "12xy", "12zy", "12ty", "12xy"//, "Firemaker", "Lego"
 		};
 
-		Double [] presentVolumes = {1.530, 4.110, 78.530, 6.00//, 1.040//, 5.02
+		Double [] presentVolumes = {1.0, 1.0, 3.0, 2.00//, 1.040, 5.02
 		};
 
-		Double [] presentPrices = { 6.00, 18.00, 55.230, 32.930//, 6.990//, 12.01
+		Double [] presentPrices = { 1.00, 3.00, 2.0, 4.0//, 6.990, 12.01
 		};
 
-		Integer [] presentQuantities = {22, 4, 2, 5//, 5//, 8
+		Integer [] presentQuantities = {1, 1, 1, 1//, 5, 8
 		};
 
-		Double budget = 180.01;
-		Double bagVolume = 64.11;
-		Integer peopleNum = 6;
+		List<TaskConditions> taskConditions = new ArrayList<>();
+		taskConditions.add(new TaskConditions(4.0, 2.0,1));
+		taskConditions.add(new TaskConditions(5.0, 2.0,1));
+		taskConditions.add(new TaskConditions(4.0, 3.0,1));
+		taskConditions.add(new TaskConditions(7.0, 2.0,1));
+		taskConditions.add(new TaskConditions(4.0, 4.0,1));
+		taskConditions.add(new TaskConditions(3.0, 4.0,1));
+		taskConditions.add(new TaskConditions(3.0, 5.0,1));
+		taskConditions.add(new TaskConditions(5.0, 3.0,1));
+		taskConditions.add(new TaskConditions(5.0, 5.0,1));
+		taskConditions.add(new TaskConditions(5.0, 4.0,1));
+		taskConditions.add(new TaskConditions(5.0, 4.0,1));
+		taskConditions.add(new TaskConditions(7.0, 3.0,1));
+		taskConditions.add(new TaskConditions(7.0, 6.0,1));
+		taskConditions.add(new TaskConditions(8.0, 4.0,1));
+		taskConditions.add(new TaskConditions(6.0, 5.0,1));
+		taskConditions.add(new TaskConditions(7.0, 5.0,1));
+		taskConditions.add(new TaskConditions(5.0, 4.0,1));
+		taskConditions.add(new TaskConditions(6.0, 4.0,1));
 
 
 		DataLoadable loadData = new LoadData();
-		List <Goods> goodsList = loadData.loadDataGoods(idGoods, presentNames
+		List <Goods> goodsOfList = loadData.loadDataGoods(idGoods, presentNames
 				, presentVolumes, presentPrices, presentQuantities) ;
+
 
 
 		PrintStream outResult = new PrintStream(new FileOutputStream("testresultsout.log"));
 		System.setOut(outResult);
-		System.out.println("INPUT LIST GOODS SHOULD ANALIZED =>\n" + goodsList + "\n\n");
 
 
 
-		TaskConditions taskConditions = new TaskConditions(budget, bagVolume, peopleNum);
+		printListGoods(goodsOfList);
+		for (TaskConditions conditions: taskConditions) {
+			SolutionDTO solution = new SolutionDTO(goodsOfList, conditions);
 
+			solution.createGifts();
 
+			solution.printResult();
 
-		SolutionDTO solution = new SolutionDTO(goodsList, taskConditions);
-		solution.createGifts();
+		}
 
-
+/*
 
 		System.out.println("TASK CONDITIONS =>\n" + taskConditions + "\n\n");
 
@@ -128,9 +150,21 @@ class GifttaskApplicationTests {
 		}
 
 		System.out.println("CHANGE =>" + solution.delta + "\n\n");
+*/
 
 		//Assertions.assertTrue(solution.bagGifts.size() == 0);
 	}
 
-
+	public void printListGoods (List<Goods> goods){
+		System.out.println("id\t\t" + "price\t\t" + "volume");
+		for (Goods good:goods){
+			StringBuilder typeIt = new StringBuilder();
+			typeIt.append(good.getIdGood() + "\t\t")
+					.append(String.format("%.2f" ,good.getPresentPrice()))
+					.append("\t\t")
+					.append(String.format("%.2f" ,good.getPresentVolume()));
+			System.out.println( typeIt);
+		}
+		System.out.println("\n\n");
+	}
 }

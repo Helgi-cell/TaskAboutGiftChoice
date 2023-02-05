@@ -73,7 +73,7 @@ public class Gifts {
         Long id = 0L;
         for (Goods good:this.gift) {
             if (id == 0L){
-                giftString = giftString + good.getGoodName() + " = ";
+                giftString = giftString + good.getIdGood() + " = ";
                 sztuc++;
                 id = good.getIdGood();
             } else {
@@ -83,7 +83,7 @@ public class Gifts {
                     giftString = giftString + sztuc + "sz.  ";
                     id = good.getIdGood();
                     sztuc = 1;
-                    giftString = giftString + good.getGoodName() + " = ";
+                    giftString = giftString + good.getIdGood() + " = ";
                 }
             }
             }

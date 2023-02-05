@@ -18,7 +18,7 @@ public class GiftsInBag {
     }
 
 
-    private Double howVolumeBag(List<Gifts> bagGifts){
+    public Double howVolumeBag(List<Gifts> bagGifts){
         Double volumeBag = 0.0;
         for (Gifts gift : bagGifts) {
             volumeBag += gift.getVolumeGift();
@@ -26,7 +26,7 @@ public class GiftsInBag {
         return volumeBag;
     }
 
-    private Double howPriceBag(List<Gifts> bagGifts){
+    public Double howPriceBag(List<Gifts> bagGifts){
         Double priceBag = 0.0;
         for (Gifts gift : bagGifts) {
             priceBag += gift.getPriceGift();

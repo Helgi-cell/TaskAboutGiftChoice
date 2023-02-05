@@ -308,5 +308,42 @@ public class SolutionDTO {
         return new GiftsInBag(gifts, taskCondition);
     }
 
+    public void printResult(){
+        System.out.println("For budget = " + String.format("%.2f",taskCondition.getBudget())
+                          + "  volume = " + String.format("%.2f",taskCondition.getBagVolume())
+                          + " number of people = " + taskCondition.getPeopleNum()
+                          + "  RESULT ITEMS = " + resultGifts.size());
+        String bar = "";
+        for (int i = 0; i < taskCondition.getPeopleNum(); i++){
+            bar = bar + "id      " + "price     " + "volume       ";
+        }
+        System.out.println(bar + " items price\t" + " items volume\t\t");
+        StringBuilder stringResult = new StringBuilder();
+
+        for (GiftsInBag gifts:this.resultGifts){
+            for (Gifts gift:gifts.getBagWithGifts()){
+                for (Goods good:gift.getGift()){
+                    stringResult = stringResult.append(good.getIdGood()).append(',');
+                }
+                stringResult.deleteCharAt(stringResult.length()-1)
+                            .append("\t\t")
+                            .append(gift.getPriceGift()).append("\t\t\t")
+                            .append(gift.getVolumeGift()).append("\t\t\t");
+
+            }
+            stringResult.append(gifts.howPriceBag(gifts.getBagWithGifts())).append("\t\t\t")
+                        .append(gifts.howVolumeBag(gifts.getBagWithGifts())).append("\t\t\t")
+                    .append("budget = ").append(String.format("%.2f",taskCondition.getBudget())).append(";  ")
+                    .append("bagVolume = ").append(String.format("%.2f",taskCondition.getBagVolume()));
+            System.out.println(stringResult );
+            stringResult = new StringBuilder();
+
+        }
+        System.out.println("\n\n");
+    }
+
+
+
+
 } // end class
 
