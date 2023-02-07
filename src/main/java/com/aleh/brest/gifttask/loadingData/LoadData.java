@@ -7,30 +7,21 @@ import com.aleh.brest.gifttask.goodsAPI.GoodsInterface;
 import com.aleh.brest.gifttask.goodsAPI.TaskConditionsInterface;
 import com.sun.jdi.ObjectCollectedException;
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
 public class LoadData implements DataLoadable, GoodsInterface, TaskConditionsInterface {
-
     @Override
     public Optional<List<Goods>> loadDataGoodsFromInterface() throws ObjectCollectedException {
-        List<Goods> storeGoods = new ArrayList<>();
+        List<Goods> storeGoods = GoodsInterface.goodsI;
         Optional<List<Goods>> storeGoodsOptional = Optional.of(storeGoods);
-        try {
-            for (int i = 0; i < GoodsInterface.presentNames.length; i++) {
-                storeGoods.add(new Goods(GoodsInterface.idGoods[i],GoodsInterface.presentNames[i], GoodsInterface.presentVolumes[i]
-                                       , GoodsInterface.presentPrices[i], GoodsInterface.presentQuantity [i]));
-            }
-        } catch (ObjectCollectedException e) {
-            return storeGoodsOptional;
-        }
         return (Optional<List<Goods>>) storeGoodsOptional;
     }
 
     @Override
     public Optional<TaskConditions> loadTaskConditionsFromInterface() {
-        TaskConditions taskConditions = new TaskConditions(budget, bagVolume, peopleNum);
+        TaskConditions taskConditions = TaskConditionsInterface.conditionsI;
         Optional<TaskConditions> taskConditionsOptional = Optional.of(taskConditions);
         return taskConditionsOptional;
     }
@@ -45,26 +36,10 @@ public class LoadData implements DataLoadable, GoodsInterface, TaskConditionsInt
         return true;
     }
 
-   @Override
-    public List<Goods> loadDataGoods(Long [] id, String [] names
-                                   , Double [] volumes, Double [] prices, Integer [] quantities) {
-        List<Goods> storeGoods = new ArrayList<>();
-        try {
-            for (int i = 0; i < names.length; i++) {
-                storeGoods.add(new Goods(id[i],names[i], volumes [i], prices[i], quantities[i]));
-            }
-        } catch (ObjectCollectedException e) {
-            return storeGoods;
-        }
-        return storeGoods;
-    }
-
     @Override
-    public TaskConditions loadTaskConditions(Double budgetAll
-                                                 , Double bagVolumeAll, Integer peopleNumAll) {
+    public TaskConditions loadTaskConditions(BigDecimal budgetAll
+                                                 , BigDecimal bagVolumeAll, Integer peopleNumAll) {
         TaskConditions taskConditions = new TaskConditions(budgetAll, bagVolumeAll, peopleNumAll);
         return taskConditions;
     }
-
-
 }

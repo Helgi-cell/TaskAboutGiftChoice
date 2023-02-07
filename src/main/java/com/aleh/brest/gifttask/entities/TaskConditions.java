@@ -1,32 +1,33 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class TaskConditions {
-    private Double budget;
-    private Double bagVolume;
+    private BigDecimal budget;
+    private BigDecimal bagVolume;
     private Integer peopleNum;
 
-    public TaskConditions(Double budget, Double bagVolume, Integer peopleNum) {
+    public TaskConditions(BigDecimal budget, BigDecimal bagVolume, Integer peopleNum) {
         //result.setScale(2, RoundingMode.HALF_UP);
-        this.budget = budget + 0.010000 ;
-        this.bagVolume = bagVolume + 0.01 ;
+        this.budget = budget;
+        this.bagVolume = bagVolume;
         this.peopleNum = peopleNum;
     }
 
-    public Double getBudget() {
+    public BigDecimal getBudget() {
         return budget;
     }
 
-    public void setBudget(Double budget) {
+    public void setBudget(BigDecimal budget) {
         this.budget = budget;
     }
 
-    public Double getBagVolume() {
+    public BigDecimal getBagVolume() {
         return bagVolume;
     }
 
-    public void setBagVolume(Double bagVolume) {
+    public void setBagVolume(BigDecimal bagVolume) {
         this.bagVolume = bagVolume;
     }
 

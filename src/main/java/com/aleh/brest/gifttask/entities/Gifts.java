@@ -1,5 +1,6 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -9,8 +10,8 @@ import java.util.stream.Collectors;
 public class Gifts {
 
     private List<Goods> gift;
-    private Double volumeGift;
-    private Double priceGift;
+    private BigDecimal volumeGift;
+    private BigDecimal priceGift;
 
     public Gifts(List<Goods> giftIn) {
         this.gift = sortListGoods(giftIn);
@@ -18,24 +19,24 @@ public class Gifts {
         this.priceGift = encountPriceGift(this.gift);
     }
 
-    public void insertGood (Goods good){
+  /*  public void insertGood (Goods good){
         this.gift.add(good);
         this.volumeGift = encountVolumeGift(this.gift);
         this.priceGift = encountPriceGift(this.gift);
     }
-
-    private Double encountVolumeGift(List<Goods> giftList){
-        Double volume = 0.0;
+*/
+    private BigDecimal encountVolumeGift(List<Goods> giftList){
+        BigDecimal volume = BigDecimal.valueOf(0);
         for (Goods good:giftList ) {
-            volume += good.getPresentVolume();
+            volume = volume.add(good.getPresentVolume());
         }
         return volume;
     }
 
-    private Double encountPriceGift(List<Goods> giftList){
-        Double price = 0.0;
+    private BigDecimal encountPriceGift(List<Goods> giftList){
+        BigDecimal price = BigDecimal.valueOf(0);
         for (Goods good:giftList ) {
-            price += good.getPresentPrice();
+            price = price.add(good.getPresentPrice());
         }
         return price;
     }
@@ -49,19 +50,19 @@ public class Gifts {
         this.gift = gift;
     }
 
-    public Double getVolumeGift() {
+    public BigDecimal getVolumeGift() {
         return volumeGift;
     }
 
-    public void setVolumeGift(Double volumeGift) {
+    public void setVolumeGift(BigDecimal volumeGift) {
         this.volumeGift = volumeGift;
     }
 
-    public Double getPriceGift() {
+    public BigDecimal getPriceGift() {
         return priceGift;
     }
 
-    public void setPriceGift(Double priceGift) {
+    public void setPriceGift(BigDecimal priceGift) {
         this.priceGift = priceGift;
     }
 

@@ -1,19 +1,20 @@
 package com.aleh.brest.gifttask.entities;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Goods {
     private long idGood;
     private String goodName;
-    private Double presentVolume;
-    private Double presentPrice;
+    private BigDecimal presentVolume;
+    private BigDecimal presentPrice;
 
     private Integer quantity;
 
     public Goods() {
     }
 
-    public Goods(long idGood, String goodName, Double presentVolume, Double presentPrice, Integer quantity) {
+    public Goods(long idGood, String goodName, BigDecimal presentVolume, BigDecimal presentPrice, Integer quantity) {
         this.idGood = idGood;
         this.goodName = goodName;
         this.presentVolume = presentVolume;
@@ -37,19 +38,19 @@ public class Goods {
         this.goodName = goodName;
     }
 
-    public Double getPresentVolume() {
+    public BigDecimal getPresentVolume() {
         return presentVolume;
     }
 
-    public void setPresentVolume(Double presentVolume) {
+    public void setPresentVolume(BigDecimal presentVolume) {
         this.presentVolume = presentVolume;
     }
 
-    public Double getPresentPrice() {
+    public BigDecimal getPresentPrice() {
         return presentPrice;
     }
 
-    public void setPresentPrice(Double presentPrice) {
+    public void setPresentPrice(BigDecimal presentPrice) {
         this.presentPrice = presentPrice;
     }
 

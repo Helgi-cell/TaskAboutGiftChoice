@@ -1,68 +1,31 @@
 package com.aleh.brest.gifttask.goodsAPI;
 
+import com.aleh.brest.gifttask.entities.Goods;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
 public interface GoodsInterface {
 
+    final List<Goods> goodsI = fillGoods();
 
 
-
-
-    final Long [] idGoods = { 1L, 2L, 3L
-        //, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L
-     };
-
-    final String [] presentNames = {  "Glasses",   "BoomBox",   "Wallet"//,  "Printer"
-                                    //, "Firemaker", "Bubblegum", "Lego",    "TVset"
-                                    //, "Laundry",   "Pillow",    "Blanket", "Vacuum cleaner"
-                                    };
-
-    final Double [] presentVolumes = {4.530, 9.110, 2.530//, 6.00
-                                    //, 1.040, 0.870, 2.570, 19.450
-                                    //, 65.590, 14.140, 16.660, 13.530
-                                    };
-
-    final Double [] presentPrices = {   12.230, 45.030, 12.230//, 32.930
-                                    //,    6.990,  5.460,  7.340, 65.980
-                                    //,  152.130,  7.230, 10.00, 25.250
-                                    };
-
-
-    final Integer [] presentQuantity = { 1, 1, 1//, 8
-                                //,   22, 100,  7, 3
-                                //,    2,  17, 10,12
-                                };
-
-
-
-
-
-
-
-
-
-/*
-
-    final Long [] idGoods = { 1L, 2L, 3L//, 4L, 5L
-    };
-
-    final String [] presentNames = {  "Glasses", "BoomBox", "Wallet"//, "Printer", "Firemaker"
-    };
-
-    final Double [] presentVolumes = {1.530, 9.110, 4.530//, 6.00, 1.040
-    };
-
-    final Double [] presentPrices = {   6.00, 45.030, 1.230//, 32.930, 6.990
-    };
-
-    final Integer [] presentQuantity = {   12, 5, 22//, 8, 22
-                                        //, 100,  7, 3, 2, 17, 10, 12
-                                };
-
-
-*/
-
-
-
-
-
+    static List<Goods> fillGoods(){
+        List<Goods> goods = new ArrayList<>();
+        goods.add(new Goods( 1L, "12aa", BigDecimal.valueOf(4.53), BigDecimal.valueOf(12.23), 1));
+        goods.add(new Goods( 2L, "12bb", BigDecimal.valueOf(9.11), BigDecimal.valueOf(45.03), 1));
+        goods.add(new Goods( 3L, "12cc", BigDecimal.valueOf(2.53), BigDecimal.valueOf(12.23), 1));
+        goods.add(new Goods( 4L, "12dd", BigDecimal.valueOf(6.00), BigDecimal.valueOf(32.93), 1));
+        goods.add(new Goods( 6L, "12ff", BigDecimal.valueOf(1.04), BigDecimal.valueOf(6.99), 1));
+        goods.add(new Goods( 7L, "12gg", BigDecimal.valueOf(0.87), BigDecimal.valueOf(5.46), 1));
+        goods.add(new Goods( 8L, "12hh", BigDecimal.valueOf(2.57), BigDecimal.valueOf(7.34), 1));
+        goods.add(new Goods( 9L, "12ii", BigDecimal.valueOf(19.45), BigDecimal.valueOf(65.98), 1));
+        goods.add(new Goods(10L, "12jj", BigDecimal.valueOf(65.59), BigDecimal.valueOf(52.13), 1));
+        goods.add(new Goods(11L, "12kk", BigDecimal.valueOf(14.14), BigDecimal.valueOf(7.23), 1));
+        goods.add(new Goods(11L, "12ll", BigDecimal.valueOf(16.66), BigDecimal.valueOf(10.00), 1));
+        goods.add(new Goods(11L, "12mm", BigDecimal.valueOf(13.53), BigDecimal.valueOf(25.25), 1));
+    return goods;
+    }
 }
 

@@ -4,6 +4,7 @@ import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
 
 import java.lang.reflect.Array;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,11 +14,9 @@ public interface DataLoadable {
 
     Optional  <TaskConditions> loadTaskConditionsFromInterface();
 
-    List<Goods> loadDataGoods(Long [] id, String [] names
-            , Double [] volumes, Double [] prices, Integer [] quantities);
 
-    TaskConditions loadTaskConditions(Double budgetAll
-            , Double bagVolumeAll, Integer peopleNumAll);
+    TaskConditions loadTaskConditions(BigDecimal budgetAll
+            , BigDecimal bagVolumeAll, Integer peopleNumAll);
 
 
     boolean insertNewGood (List<Goods> goods,Goods good);

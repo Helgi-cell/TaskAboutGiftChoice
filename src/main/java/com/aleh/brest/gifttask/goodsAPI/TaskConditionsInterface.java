@@ -1,17 +1,13 @@
 package com.aleh.brest.gifttask.goodsAPI;
 
+import com.aleh.brest.gifttask.entities.TaskConditions;
+
+import java.math.BigDecimal;
+
 public interface TaskConditionsInterface {
-    final Double budget = 183.23;
-    final Double bagVolume = 64.11;
-    final Integer peopleNum = 7;
 
-
-/*
-
-    final Double budget = 180.01;
-    final Double bagVolume = 64.11;
-    final Integer peopleNum = 6;
-*/
-
+    final TaskConditions conditionsI = new TaskConditions(BigDecimal.valueOf(183.23)
+                                                           , BigDecimal.valueOf(64.11)
+                                                           , 7);
 }
 
