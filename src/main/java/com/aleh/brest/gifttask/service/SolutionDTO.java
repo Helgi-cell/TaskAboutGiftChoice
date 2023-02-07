@@ -205,6 +205,7 @@ public class SolutionDTO {
                     .sorted(Comparator.comparingLong(Goods::getIdGood))
                     .collect(Collectors.toList());
     }
+/*
 
     private List<Gifts> sortListGifts(List<Gifts> unsotedList) {
         for (Gifts gift:unsotedList) {
@@ -213,6 +214,8 @@ public class SolutionDTO {
         }
         return unsotedList;
     }
+*/
+/*
 
     private Boolean isListGoodsEqual(List<Goods> first, List<Goods> second) {
         Boolean isTrue = true;
@@ -227,6 +230,7 @@ public class SolutionDTO {
         }
         return isTrue;
     }
+*/
 
     private Boolean[][] initMatrix(Integer numPersons, List<Gifts> listGifts) {
         Boolean[][] matrix = new Boolean[numPersons][listGifts.size()];

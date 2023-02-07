@@ -78,8 +78,6 @@ public class GiftsInBag {
 
     }
 
-
-
     public List<Gifts> getBagWithGifts() {
         return bagWithGifts;
     }
@@ -114,8 +112,6 @@ public class GiftsInBag {
 
         if (this == o) return true;
         if (!(o instanceof GiftsInBag)) return false;
-
-
         if (this.getBagWithGifts().size() > 0 && ((GiftsInBag) o).getBagWithGifts().size() > 0){
             GiftsInBag externalGiftInBag = cloneGiftsInBag((GiftsInBag) o);
             GiftsInBag internalGiftInBag = cloneGiftsInBag(this);

@@ -19,12 +19,6 @@ public class Gifts {
         this.priceGift = encountPriceGift(this.gift);
     }
 
-  /*  public void insertGood (Goods good){
-        this.gift.add(good);
-        this.volumeGift = encountVolumeGift(this.gift);
-        this.priceGift = encountPriceGift(this.gift);
-    }
-*/
     private BigDecimal encountVolumeGift(List<Goods> giftList){
         BigDecimal volume = BigDecimal.valueOf(0);
         for (Goods good:giftList ) {
