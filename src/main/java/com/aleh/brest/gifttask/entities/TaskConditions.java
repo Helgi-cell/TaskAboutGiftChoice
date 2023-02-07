@@ -9,8 +9,8 @@ public class TaskConditions {
 
     public TaskConditions(Double budget, Double bagVolume, Integer peopleNum) {
         //result.setScale(2, RoundingMode.HALF_UP);
-        this.budget = budget + 0.0001 ;
-        this.bagVolume = bagVolume + 0.0001 ;
+        this.budget = budget + 0.010000 ;
+        this.bagVolume = bagVolume + 0.01 ;
         this.peopleNum = peopleNum;
     }
 

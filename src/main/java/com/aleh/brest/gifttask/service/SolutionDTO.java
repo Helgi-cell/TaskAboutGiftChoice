@@ -63,8 +63,8 @@ public class SolutionDTO {
                 newGoods = cloneListGoods(gift.getGift());
                 newGoods.add(cloneGood(goodsList.get(i)));
                 newGift = new Gifts(newGoods);
-                if((newGift.getPriceGift() < taskCondition.getBudget()/criteria)
-                        && (newGift.getVolumeGift() < taskCondition.getBagVolume()/criteria)
+                if((newGift.getPriceGift() <= taskCondition.getBudget())
+                        && (newGift.getVolumeGift() <= taskCondition.getBagVolume())
                         && (isQuantityGifts(newGift))) {
                     newGifts.add(newGift);
                 }
@@ -95,7 +95,7 @@ public class SolutionDTO {
 
             if (isQuantityGiftsInBag(giftsInBag)) {
 
-                if (Math.abs(giftsInBag.getDeltaToBudget() - delta) < 0.001) {
+                if ((giftsInBag.getDeltaToBudget() == delta ) && (giftsInBag.getDeltaToBudget() > 0.0)) {
                     this.resultGifts.add(giftsInBag);
                     this.resultGifts = deleteSimilarGiftsInBag(resultGifts);
                 } else {
@@ -315,9 +315,9 @@ public class SolutionDTO {
                           + "  RESULT ITEMS = " + resultGifts.size());
         String bar = "";
         for (int i = 0; i < taskCondition.getPeopleNum(); i++){
-            bar = bar + "id      " + "price     " + "volume       ";
+            bar = bar + "id\t\t\t" + "price\t\t\t" + "volume\t\t\t";
         }
-        System.out.println(bar + " items price\t" + " items volume\t\t");
+        System.out.println(bar + " items price\t" + " items volume\t\t\t");
         StringBuilder stringResult = new StringBuilder();
 
         for (GiftsInBag gifts:this.resultGifts){
@@ -326,14 +326,14 @@ public class SolutionDTO {
                     stringResult = stringResult.append(good.getIdGood()).append(',');
                 }
                 stringResult.deleteCharAt(stringResult.length()-1)
-                            .append("\t\t")
+                            .append("\t\t\t")
                             .append(gift.getPriceGift()).append("\t\t\t")
                             .append(gift.getVolumeGift()).append("\t\t\t");
 
             }
             stringResult.append(gifts.howPriceBag(gifts.getBagWithGifts())).append("\t\t\t")
                         .append(gifts.howVolumeBag(gifts.getBagWithGifts())).append("\t\t\t")
-                    .append("budget = ").append(String.format("%.2f",taskCondition.getBudget())).append(";  ")
+                    .append("\nbudget = ").append(String.format("%.2f",taskCondition.getBudget())).append(";  ")
                     .append("bagVolume = ").append(String.format("%.2f",taskCondition.getBagVolume()));
             System.out.println(stringResult );
             stringResult = new StringBuilder();
