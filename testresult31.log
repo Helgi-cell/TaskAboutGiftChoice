@@ -1,11 +1,4 @@
-id		price		volume
-1		4,01		2,00
-2		3,00		1,99
-3		3,99		4,00
-4		4,41		2,00
-5		1,00		1,59
-
-
+Number of person = 2
 
 id		price		volume
 1		4,01		2,00
@@ -16,10 +9,20 @@ id		price		volume
 
 
 
-For budget = 12,02  volume = 7,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+
+For budget = 10,00  volume = 7,00 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4			4.41			2.0			1			4.01			2.0			8.42			4.0			
-budget = 12,02;  bagVolume = 7,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 10,00;  bagVolume = 7,00
 
 
 
@@ -32,10 +35,19 @@ id		price		volume
 
 
 
-For budget = 12,00  volume = 9,60 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 11,00  volume = 7,00 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4			4.41			2.0			1			4.01			2.0			8.42			4.0			
-budget = 12,00;  bagVolume = 9,60
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 11,00;  bagVolume = 7,00
 
 
 
@@ -48,10 +60,19 @@ id		price		volume
 
 
 
-For budget = 12,00  volume = 9,59 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 10,00  volume = 8,00 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4			4.41			2.0			1			4.01			2.0			8.42			4.0			
-budget = 12,00;  bagVolume = 9,59
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 10,00;  bagVolume = 8,00
 
 
 
@@ -64,10 +85,19 @@ id		price		volume
 
 
 
-For budget = 12,02  volume = 9,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,01  volume = 7,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-3,5			4.99			5.59			1,2			7.01			3.99			12.0			9.58			
-budget = 12,02;  bagVolume = 9,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,01;  bagVolume = 7,57
 
 
 
@@ -80,10 +110,19 @@ id		price		volume
 
 
 
-For budget = 12,01  volume = 9,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 11,99  volume = 9,59 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-3,5			4.99			5.59			1,2			7.01			3.99			12.0			9.58			
-budget = 12,01;  bagVolume = 9,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 11,99;  bagVolume = 9,59
 
 
 
@@ -96,10 +135,19 @@ id		price		volume
 
 
 
-For budget = 12,43  volume = 7,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 11,99  volume = 9,58 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4,5			5.41			3.59			1,2			7.01			3.99			12.42			7.58			
-budget = 12,43;  bagVolume = 7,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 11,99;  bagVolume = 9,58
 
 
 
@@ -112,10 +160,19 @@ id		price		volume
 
 
 
-For budget = 12,42  volume = 7,59 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,01  volume = 9,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4			4.41			2.0			1			4.01			2.0			8.42			4.0			
-budget = 12,42;  bagVolume = 7,59
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,01;  bagVolume = 9,57
 
 
 
@@ -128,10 +185,19 @@ id		price		volume
 
 
 
-For budget = 12,42  volume = 9,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,00  volume = 9,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4,5			5.41			3.59			2,3			6.99			5.99			12.4			9.58			
-budget = 12,42;  bagVolume = 9,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,00;  bagVolume = 9,57
 
 
 
@@ -144,10 +210,19 @@ id		price		volume
 
 
 
-For budget = 12,41  volume = 9,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,42  volume = 7,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4,5			5.41			3.59			2,3			6.99			5.99			12.4			9.58			
-budget = 12,41;  bagVolume = 9,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,42;  bagVolume = 7,57
 
 
 
@@ -160,10 +235,19 @@ id		price		volume
 
 
 
-For budget = 15,43  volume = 7,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,41  volume = 7,58 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4,5			5.41			3.59			1,2			7.01			3.99			12.42			7.58			
-budget = 15,43;  bagVolume = 7,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,41;  bagVolume = 7,58
 
 
 
@@ -176,10 +260,19 @@ id		price		volume
 
 
 
-For budget = 15,43  volume = 10,00 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,41  volume = 9,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-3,4			8.4			6.0			1,2			7.01			3.99			15.41			9.99			
-budget = 15,43;  bagVolume = 10,00
+4			4.41			2.0			     1			4.01			2.0			8.42			4.0
+budget = 12,41;  bagVolume = 9,57
 
 
 
@@ -192,10 +285,98 @@ id		price		volume
 
 
 
-For budget = 16,01  volume = 7,58 number of people = 2  RESULT ITEMS = 1
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 12,40  volume = 9,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4,5			5.41			3.59			1,2			7.01			3.99			12.42			7.58			
-budget = 16,01;  bagVolume = 7,58
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 12,40;  bagVolume = 9,57
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 15,42  volume = 7,57 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 15,42;  bagVolume = 7,57
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 15,42  volume = 9,99 number of people = 2  RESULT ITEMS = 3
+id			price			volume			id			price			volume			 items price	 items volume			
+3,4			8.40			6.0			    1,2			7.01			3.99			15.41			9.99
+budget = 15,42;  bagVolume = 9,99
+2,4			7.41			3.99			1,3			8.00			6.0			15.41			9.99			
+budget = 15,42;  bagVolume = 9,99
+2,3			6.99			5.99			1,4			8.42			4.0			15.41			9.99			
+budget = 15,42;  bagVolume = 9,99
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+id		price		volume
+1		4,01		2,00
+2		3,00		1,99
+3		3,99		4,00
+4		4,41		2,00
+5		1,00		1,59
+
+
+
+For budget = 16,00  volume = 7,57 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+4			4.41			2.0			    1			4.01			2.0			8.42			4.0
+budget = 16,00;  bagVolume = 7,57
 
 
 

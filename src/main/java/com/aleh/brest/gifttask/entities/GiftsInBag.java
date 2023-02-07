@@ -40,7 +40,7 @@ public class GiftsInBag {
         for (Gifts gift : bagGifts) {
             volumeBag = volumeBag.add(gift.getVolumeGift());
         }
-        if (taskConditions.getBagVolume().compareTo(volumeBag) == 1){
+        if (taskConditions.getBagVolume().compareTo(volumeBag) >= 0){
             return true;
         } else {
             return false;
@@ -52,7 +52,7 @@ public class GiftsInBag {
         for (Gifts gift : bagGifts) {
             priceBag = priceBag.add(gift.getPriceGift());
         }
-        if (taskConditions.getBudget().compareTo(priceBag) == 1) {
+        if (taskConditions.getBudget().compareTo(priceBag) >= 0) {
             return true;
         } else {
             return false;
@@ -60,15 +60,22 @@ public class GiftsInBag {
     }
 
     private BigDecimal encountDeltaBudget() {
+        BigDecimal delta = BigDecimal.valueOf(0);
         if (isEncountPriceBag(this.bagWithGifts) && isEncountVolumeBag(this.bagWithGifts)){
-            BigDecimal delta = BigDecimal.valueOf(0);
+
             for (Gifts gift:this.bagWithGifts ) {
                 delta = delta.add(gift.getPriceGift());
             }
-            return taskConditions.getBudget().subtract(delta);
+            if (delta.compareTo(taskConditions.getBudget()) == 1){
+                return taskConditions.getBudget().add(BigDecimal.valueOf(100));
+            } else{
+                return taskConditions.getBudget().subtract(delta);
+            }
         } else {
-            return taskConditions.getBudget().add(BigDecimal.valueOf(1));
+
+            return taskConditions.getBudget().add(BigDecimal.valueOf(100));
         }
+
     }
 
 

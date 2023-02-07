@@ -4,6 +4,8 @@ import com.aleh.brest.gifttask.entities.Gifts;
 import com.aleh.brest.gifttask.entities.GiftsInBag;
 import com.aleh.brest.gifttask.entities.Goods;
 import com.aleh.brest.gifttask.entities.TaskConditions;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -15,7 +17,7 @@ public class SolutionDTO {
     public List<Gifts> bagGifts;
     public List<GiftsInBag> resultGifts;
     public Integer criteria = 1;
-    public Double delta;
+    public BigDecimal delta;
 
     public SolutionDTO(List<Goods> goodsList, TaskConditions taskCondition) {
         this.goodsList = goodsList;
@@ -37,8 +39,8 @@ public class SolutionDTO {
     private List<Gifts> initGifts() {
         Gifts gift ;
         for (int i = 0; i < this.goodsList.size(); i++){
-            if ((this.goodsList.get(i).getPresentPrice() > this.taskCondition.getBudget())
-                    || (this.goodsList.get(i).getPresentVolume() > this.taskCondition.getBagVolume())){
+            if ((this.goodsList.get(i).getPresentPrice().compareTo(this.taskCondition.getBudget()) == 1)
+                    || (this.goodsList.get(i).getPresentVolume().compareTo(this.taskCondition.getBagVolume())) == 1){
                 goodsList.remove(i);
                 i = 0;
             }
@@ -63,8 +65,8 @@ public class SolutionDTO {
                 newGoods = cloneListGoods(gift.getGift());
                 newGoods.add(cloneGood(goodsList.get(i)));
                 newGift = new Gifts(newGoods);
-                if((newGift.getPriceGift() <= taskCondition.getBudget())
-                        && (newGift.getVolumeGift() <= taskCondition.getBagVolume())
+                if((taskCondition.getBudget().compareTo(newGift.getPriceGift()) >= 0)
+                        && (taskCondition.getBagVolume().compareTo(newGift.getVolumeGift()) >= 0)
                         && (isQuantityGifts(newGift))) {
                     newGifts.add(newGift);
                 }
@@ -95,12 +97,11 @@ public class SolutionDTO {
 
             if (isQuantityGiftsInBag(giftsInBag)) {
 
-                if ((giftsInBag.getDeltaToBudget() == delta ) && (giftsInBag.getDeltaToBudget() > 0.0)) {
+                if (giftsInBag.getDeltaToBudget().compareTo(this.delta) == 0) {
                     this.resultGifts.add(giftsInBag);
                     this.resultGifts = deleteSimilarGiftsInBag(resultGifts);
                 } else {
-                    if (giftsInBag.getDeltaToBudget() < delta
-                            && giftsInBag.getDeltaToBudget() > 0) {
+                    if (this.delta.compareTo(giftsInBag.getDeltaToBudget()) == 1) {
                         this.resultGifts = new ArrayList<>();
                         this.resultGifts.add(cloneGiftsInBag(giftsInBag));
                         delta = giftsInBag.getDeltaToBudget();

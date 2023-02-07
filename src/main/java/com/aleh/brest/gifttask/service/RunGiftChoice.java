@@ -9,6 +9,7 @@ import com.aleh.brest.gifttask.loadingData.LoadData;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.math.BigDecimal;
 import java.util.List;
 
 public class RunGiftChoice {
@@ -31,7 +32,8 @@ public class RunGiftChoice {
 
 
 
-        SolutionDTO solution = new SolutionDTO(loadData.loadDataGoodsFromInterface().get(), loadData.loadTaskConditionsFromInterface().get());
+        SolutionDTO solution = new SolutionDTO(loadData.loadDataGoodsFromInterface().get(),
+                loadData.loadTaskConditionsFromInterface().get());
         solution.createGifts();
 
         System.out.println("LIST have been ANALIZED =>\n" + solution.goodsList + "\n\n");
@@ -44,12 +46,12 @@ public class RunGiftChoice {
 
         for (GiftsInBag giftInBag: allGifts){
             List<Gifts> gifts = giftInBag.getBagWithGifts();
-            Double volume = 0.0;
-            Double price = 0.0;
+            BigDecimal volume = BigDecimal.valueOf(0);
+            BigDecimal price = BigDecimal.valueOf(0);
 
             for (Gifts gift: gifts){
-                volume += gift.getVolumeGift();
-                price += gift.getPriceGift();
+                volume = volume.add(gift.getVolumeGift());
+                price = price.add(gift.getPriceGift());
             }
             System.out.println("price gift = " + price +
                     "\nvolume gift = " + volume);
