@@ -36,7 +36,7 @@ public class RunGiftChoice {
                 loadData.loadTaskConditionsFromInterface().get());
         solution.createGifts();
 
-        System.out.println("LIST have been ANALIZED =>\n" + solution.goodsList + "\n\n");
+        System.out.println("\n\nLIST have been ANALIZED =>\n" + solution.goodsList + "\n\n");
         System.out.println("TASK CONDITIONS =>\n" + solution.taskCondition + "\n\n");
 
         List<GiftsInBag> allGifts = solution.resultGifts;

@@ -10,6 +10,10 @@ Goods{
 , goodName ='12cc', presentVolume =2.53, presentPrice =12.23, quantity =4}
 ----------------------------------
 
+Goods{
+, goodName ='12dd', presentVolume =6.0, presentPrice =32.93, quantity =11}
+----------------------------------
+
 INPUT LIST GOODS SHOULD ANALIZED =>
 [Goods{
 , goodName ='12aa', presentVolume =4.53, presentPrice =12.23, quantity =10}
@@ -20,81 +24,10 @@ INPUT LIST GOODS SHOULD ANALIZED =>
 , Goods{
 , goodName ='12cc', presentVolume =2.53, presentPrice =12.23, quantity =4}
 ----------------------------------
+, Goods{
+, goodName ='12dd', presentVolume =6.0, presentPrice =32.93, quantity =11}
+----------------------------------
 ]
 
 
 TaskConditions{budget=183.23, bagVolume=64.11, peopleNum=7}
-LIST have been ANALIZED =>
-[Goods{
-, goodName ='12aa', presentVolume =4.53, presentPrice =12.23, quantity =10}
-----------------------------------
-, Goods{
-, goodName ='12bb', presentVolume =9.11, presentPrice =45.03, quantity =15}
-----------------------------------
-, Goods{
-, goodName ='12cc', presentVolume =2.53, presentPrice =12.23, quantity =4}
-----------------------------------
-]
-
-
-TASK CONDITIONS =>
-TaskConditions{budget=183.23, bagVolume=64.11, peopleNum=7}
-
-
-
-==============================
-Result BAG GIFT BEST let's see bottom : 
-
-
-The number of the bags is  : 3
-[GiftsInBag =>
-3 = 2sz.
-3 = 2sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-
- Price of Bag = 171.22
- Volume of Bag = 55.42
-CHANGE = 12.01
-======================
-, GiftsInBag =>
-3 = 2sz.
-1 = 1sz.  3 = 1sz.
-1 = 1sz.  3 = 1sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-
- Price of Bag = 171.22
- Volume of Bag = 55.42
-CHANGE = 12.01
-======================
-, GiftsInBag =>
-1 = 1sz.  3 = 1sz.
-1 = 1sz.  3 = 1sz.
-1 = 1sz.  3 = 1sz.
-1 = 1sz.  3 = 1sz.
-1 = 2sz.
-1 = 2sz.
-1 = 2sz.
-
- Price of Bag = 171.22
- Volume of Bag = 55.42
-CHANGE = 12.01
-======================
-]
-price gift = 171.22
-volume gift = 55.42
-price gift = 171.22
-volume gift = 55.42
-price gift = 171.22
-volume gift = 55.42
-Change = 12.01
-=================================
-
-
-HURA!!!!!!!!!!!!!!!!!

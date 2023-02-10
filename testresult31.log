@@ -381,7 +381,7 @@ id		price		volume
 
 For budget = 16,00  volume = 7,57 number of people = 2  RESULT ITEMS = 1
 id			price			volume			id			price			volume			 items price	 items volume			
-4			4.41			2.0			1			4.01			2.0			8.42			4.0			
+4			4.41			2.0			     1			4.01			2.0			        8.42			4.0
 budget = 16,00;  bagVolume = 7,57
 
 

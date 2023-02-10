@@ -325,8 +325,13 @@ public class SolutionDTO {
         System.out.println(bar + " items price\t" + " items volume\t\t\t");
         StringBuilder stringResult = new StringBuilder();
 
+        if (this.resultGifts.size() == 0 ){
+            System.out.println("No solutions for conditions  : " + taskCondition);
+            return;
+        }
+
         for (GiftsInBag gifts:this.resultGifts){
-            for (Gifts gift:gifts.getBagWithGifts()){
+             for (Gifts gift:gifts.getBagWithGifts()){
                 for (Goods good:gift.getGift()){
                     stringResult = stringResult.append(good.getIdGood()).append(',');
                 }

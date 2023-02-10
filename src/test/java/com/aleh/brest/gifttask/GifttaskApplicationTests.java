@@ -93,6 +93,9 @@ class GifttaskApplicationTests {
 		Integer [] presentQuantities = {1, 1, 1, 1};
 
 		List <Goods> goodsOfList = new ArrayList<>();
+
+
+
 		goodsOfList.add(new Goods( 1L, "12aa", BigDecimal.valueOf(1.0), BigDecimal.valueOf(1.0), 1));
 		goodsOfList.add(new Goods( 2L, "12bb", BigDecimal.valueOf(1.0), BigDecimal.valueOf(3.0), 1));
 		goodsOfList.add(new Goods( 3L, "12cc", BigDecimal.valueOf(3.0), BigDecimal.valueOf(2.0), 1));
@@ -102,6 +105,9 @@ class GifttaskApplicationTests {
 		taskConditions.add(new TaskConditions(BigDecimal.valueOf(10.0), BigDecimal.valueOf(7.0),2));
 		taskConditions.add(new TaskConditions(BigDecimal.valueOf(11.0), BigDecimal.valueOf(7.0),2));
 		taskConditions.add(new TaskConditions(BigDecimal.valueOf(10.0), BigDecimal.valueOf(8.0),2));
+
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(7.0),2));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(10.0), BigDecimal.valueOf(6.0),2));
 
 		DataLoadable loadData = new LoadData();
 		PrintStream outResult = new PrintStream(new FileOutputStream("testresult3.log"));
@@ -165,6 +171,135 @@ class GifttaskApplicationTests {
 			solution.printResult();
 		}
 	}
+
+
+	@Test
+	void isResult32 () throws FileNotFoundException {
+
+		Integer numPeople = 1;
+		List <Goods> goodsOfList = new ArrayList<>();
+		goodsOfList.add(new Goods( 1L, "12aa", BigDecimal.valueOf(2.0), BigDecimal.valueOf(2.0), 1));
+		goodsOfList.add(new Goods( 2L, "12bb", BigDecimal.valueOf(4.00), BigDecimal.valueOf(2.0), 1));
+		goodsOfList.add(new Goods( 3L, "12cc", BigDecimal.valueOf(3.0), BigDecimal.valueOf(4.0), 1));
+		goodsOfList.add(new Goods( 4L, "12cc", BigDecimal.valueOf(5.0), BigDecimal.valueOf(3.0), 1));
+		//goodsOfList.add(new Goods( 5L, "12dd", BigDecimal.valueOf(1.59), BigDecimal.valueOf(1.0), 1));
+
+		List<TaskConditions> taskConditions = new ArrayList<>();
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(10.0), BigDecimal.valueOf(5.0),numPeople));
+
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(9.0), BigDecimal.valueOf(6.0),numPeople));
+
+		DataLoadable loadData = new LoadData();
+		PrintStream outResult = new PrintStream(new FileOutputStream("testresult32.log"));
+		System.setOut(outResult);
+
+		printListGoods(goodsOfList);
+		for (TaskConditions conditions: taskConditions) {
+			printListGoods(goodsOfList);
+			List <Goods> goodsOfList1 = new ArrayList<>();
+			for (Goods good:goodsOfList) {
+				goodsOfList1.add(new Goods(good.getIdGood(), good.getGoodName()
+						, good.getPresentVolume(), good.getPresentPrice(), good.getQuantity()));
+			}
+			SolutionDTO solution = new SolutionDTO(goodsOfList1, conditions);
+			solution.createGifts();
+			printListGoods(goodsOfList1);
+			solution.printResult();
+		}
+	}
+
+
+	@Test
+	void isResult33 () throws FileNotFoundException {
+		Integer numPeople = 2;
+		List <Goods> goodsOfList = new ArrayList<>();
+		goodsOfList.add(new Goods( 1L, "12aa", BigDecimal.valueOf(2.0), BigDecimal.valueOf(2.0), 1));
+		goodsOfList.add(new Goods( 2L, "12bb", BigDecimal.valueOf(3.0), BigDecimal.valueOf(2.0), 1));
+		goodsOfList.add(new Goods( 3L, "12cc", BigDecimal.valueOf(3.0), BigDecimal.valueOf(4.0), 1));
+		goodsOfList.add(new Goods( 4L, "12cc", BigDecimal.valueOf(5.0), BigDecimal.valueOf(3.0), 1));
+		//goodsOfList.add(new Goods( 5L, "12dd", BigDecimal.valueOf(1.59), BigDecimal.valueOf(1.0), 1));
+
+		List<TaskConditions> taskConditions = new ArrayList<>();
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(3.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(4.0), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(4.99), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(4.99), BigDecimal.valueOf(5.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(5.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(4.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(5.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.01), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.99), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.99), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.01), BigDecimal.valueOf(4.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(4.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(5.99), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.99), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.0), BigDecimal.valueOf(5.01),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.01), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(7.99), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(7.01),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.01), BigDecimal.valueOf(5.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.01), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(5.01),numPeople));
+
+
+
+
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(6.99),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.0), BigDecimal.valueOf(7.01),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(8.01), BigDecimal.valueOf(7.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(6.0),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.0), BigDecimal.valueOf(6.01),numPeople));
+		taskConditions.add(new TaskConditions(BigDecimal.valueOf(6.01), BigDecimal.valueOf(6.0),numPeople));
+
+
+
+
+
+
+
+		DataLoadable loadData = new LoadData();
+		PrintStream outResult = new PrintStream(new FileOutputStream("testresult33.log"));
+		System.setOut(outResult);
+
+		printListGoods(goodsOfList);
+		for (TaskConditions conditions: taskConditions) {
+			printListGoods(goodsOfList);
+			List <Goods> goodsOfList1 = new ArrayList<>();
+			for (Goods good:goodsOfList) {
+				goodsOfList1.add(new Goods(good.getIdGood(), good.getGoodName()
+						, good.getPresentVolume(), good.getPresentPrice(), good.getQuantity()));
+			}
+			SolutionDTO solution = new SolutionDTO(goodsOfList1, conditions);
+			solution.createGifts();
+			printListGoods(goodsOfList1);
+			solution.printResult();
+		}
+	}
+
 
 	public void printListGoods (List<Goods> goods){
 		System.out.println("id\t\t" + "price\t\t" + "volume");

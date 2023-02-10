@@ -1,0 +1,772 @@
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 5,00  volume = 3,99 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=5.0, bagVolume=3.99, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 4,00  volume = 4,00 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=4.0, bagVolume=4.0, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 4,99  volume = 4,00 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=4.99, bagVolume=4.0, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 4,99  volume = 5,99 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0			    3.0		    	1			2.0			2.0			4.0			5.0
+budget = 4,99;  bagVolume = 5,99
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 5,00  volume = 4,00 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=5.0, bagVolume=4.0, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 5,00  volume = 6,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0	    		3.0		    	1			2.0			2.0			4.0			5.0
+budget = 5,00;  bagVolume = 6,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 5,00  volume = 5,99 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0		    	3.0		    	1			2.0			2.0			4.0			5.0
+budget = 5,00;  bagVolume = 5,99
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 7,00  volume = 4,99 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=7.0, bagVolume=4.99, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,00  volume = 5,99 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			        1			2.0			2.0			6.0			5.0
+budget = 7,00;  bagVolume = 5,99
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 5,01  volume = 4,00 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=5.01, bagVolume=4.0, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 5,99  volume = 6,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0			    3.0		    	1			2.0			    2.0		        	4.0			5.0
+budget = 5,99;  bagVolume = 6,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 6,99  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0		    	3.0		    	1			2.0			2.0			6.0			5.0
+budget = 6,99;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 5,01  volume = 4,00 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=5.01, bagVolume=4.0, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+
+
+
+For budget = 8,00  volume = 4,99 number of people = 2  RESULT ITEMS = 0
+id			price			volume			id			price			volume			 items price	 items volume			
+No solutions for conditions  : TaskConditions{budget=8.0, bagVolume=4.99, peopleNum=2}
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 5,00  volume = 6,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0			3.0			1			2.0			2.0			4.0			5.0			
+budget = 5,00;  bagVolume = 6,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 5,99  volume = 6,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+2			2.0			3.0			1			2.0			2.0			4.0			5.0			
+budget = 5,99;  bagVolume = 6,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,00  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 7,00;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,99  volume = 7,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			    3.0		    	1			2.0			2.0			6.0			5.0
+budget = 7,99;  bagVolume = 7,00
+3			4.0			    3.0		    	2			2.0			3.0			6.0			6.0
+budget = 7,99;  bagVolume = 7,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,00  volume = 5,01 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 7,00;  bagVolume = 5,01
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,01  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 7,01;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 7,99  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 7,99;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 7,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 7,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,00;  bagVolume = 7,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 7,01 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 7,01
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,00;  bagVolume = 7,01
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,01  volume = 5,00 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,01;  bagVolume = 5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,01  volume = 7,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,01;  bagVolume = 7,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,01;  bagVolume = 7,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 5,01 number of people = 2  RESULT ITEMS = 1
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 5,01
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 6,99 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 6,99
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,00;  bagVolume = 6,99
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 7,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 7,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,00;  bagVolume = 7,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,00  volume = 7,01 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,00;  bagVolume = 7,01
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,00;  bagVolume = 7,01
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 8,01  volume = 7,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 8,01;  bagVolume = 7,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 8,01;  bagVolume = 7,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 6,00  volume = 6,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 6,00;  bagVolume = 6,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 6,00;  bagVolume = 6,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 6,00  volume = 6,01 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 6,00;  bagVolume = 6,01
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 6,00;  bagVolume = 6,01
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+id		price		volume
+1		2,00		2,00
+2		2,00		3,00
+3		4,00		3,00
+4		3,00		5,00
+
+
+
+For budget = 6,01  volume = 6,00 number of people = 2  RESULT ITEMS = 2
+id			price			volume			id			price			volume			 items price	 items volume			
+3			4.0			3.0			1			2.0			2.0			6.0			5.0			
+budget = 6,01;  bagVolume = 6,00
+3			4.0			3.0			2			2.0			3.0			6.0			6.0			
+budget = 6,01;  bagVolume = 6,00
+
+
+
